@@ -1,6 +1,11 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
-const config: Config = {
+export default {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -22,21 +27,21 @@ const config: Config = {
         background: {
           light: '#f4f4f5',
           dark: '#18181b',
-        }
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        mono: ['Fira Code', 'monospace']
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-roboto-mono)', 'monospace'],
+        display: ['var(--font-poppins)', 'sans-serif'],
       },
       spacing: {
         '15': '3.75rem',
-        '22': '5.5rem'
+        '22': '5.5rem',
       },
       borderRadius: {
-        'custom': '0.625rem'
-      }
-    }
-  }
-}
-
-export default config
+        custom: '0.625rem',
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
