@@ -1,6 +1,7 @@
 import '@/styles/globals.css';
 
 import { inter, poppins, robotoMono } from '@/lib/fonts';
+import { ThemeProvider } from 'next-themes';
 
 export default function RootLayout({
   children,
@@ -12,7 +13,9 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${robotoMono.variable} ${poppins.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
