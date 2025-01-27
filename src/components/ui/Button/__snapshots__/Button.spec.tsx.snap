@@ -1,0 +1,8 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Button /> > should match the snapshot 1`] = `
+<button
+  class="inline-flex items-center justify-center font-medium transition-colors duration-200 rounded-lg select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-[1px] bg-primary hover:bg-primary-hover text-white focus-visible:ring-primary/50 h-10 px-4 text-sm gap-2"
+  type="button"
+/>
+`;

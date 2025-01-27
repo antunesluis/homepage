@@ -13,19 +13,19 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyles =
-  'inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-[1px]';
+  'inline-flex items-center justify-center font-medium transition-colors duration-200 rounded-lg select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-[1px]';
 
 const variantStyles = {
   primary:
-    'bg-primary text-white hover:bg-primary-hover focus-visible:ring-primary/50',
+    'bg-primary hover:bg-primary-hover text-white focus-visible:ring-primary/50',
   secondary:
-    'bg-secondary text-white hover:bg-secondary-hover focus-visible:ring-secondary/50',
+    'bg-secondary hover:bg-secondary-hover text-white focus-visible:ring-secondary/50',
   outline:
-    'border-2 border-border hover:border-primary hover:text-primary bg-transparent',
-  ghost: 'hover:bg-muted text-foreground',
-  link: 'text-primary underline-offset-4 hover:underline bg-transparent hover:bg-transparent p-0 h-auto',
+    'border-2 border-border hover:border-border-hover hover:bg-muted bg-transparent',
+  ghost: 'hover:bg-muted bg-transparent',
+  link: 'text-primary hover:text-primary-hover underline-offset-4 hover:underline bg-transparent p-0 h-auto',
   danger:
-    'bg-red-500 text-white hover:bg-red-600 focus-visible:ring-red-500/50',
+    'bg-accent hover:bg-accent-hover text-white focus-visible:ring-accent/50',
 };
 
 const sizeStyles = {

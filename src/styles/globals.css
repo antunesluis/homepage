@@ -4,33 +4,67 @@
 
 :root {
   /* Light theme */
-  --color-background: #ffffff;
-  --color-foreground: #2c353d;
-  --color-primary: #525ceb;
-  --color-primary-hover: #4147bb;
-  --color-secondary: #78a083;
-  --color-secondary-hover: #658c6f;
-  --color-muted: #f3f4f6;
-  --color-border: #e5e7eb;
+  --color-background: #fafafa;
+  --color-foreground: #18181b;
+
+  /* Primary colors - Blue/Indigo palette */
+  --color-primary: #4f46e5;
+  --color-primary-hover: #4338ca;
+  --color-primary-muted: #e0e7ff;
+
+  /* Secondary colors - Teal palette */
+  --color-secondary: #0d9488;
+  --color-secondary-hover: #0f766e;
+  --color-secondary-muted: #ccfbf1;
+
+  /* Accent colors */
+  --color-accent: #f43f5e;
+  --color-accent-hover: #e11d48;
+  --color-accent-muted: #ffe4e6;
+
+  /* Gray scale */
+  --color-muted: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-border-hover: #d4d4d8;
+
+  /* Surface colors for cards and elevated elements */
+  --color-surface: #ffffff;
+  --color-surface-hover: #f8fafc;
 }
 
-[data-theme='dark'] {
+.dark {
   /* Dark theme */
-  --color-background: #18181b;
-  --color-foreground: #e4e4e7;
-  --color-primary: #525ceb;
-  --color-primary-hover: #6369ee;
-  --color-secondary: #78a083;
-  --color-secondary-hover: #89b194;
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+
+  /* Primary colors - adjusted for dark mode */
+  --color-primary: #6366f1;
+  --color-primary-hover: #818cf8;
+  --color-primary-muted: #1e1b4b;
+
+  /* Secondary colors - adjusted for dark mode */
+  --color-secondary: #14b8a6;
+  --color-secondary-hover: #2dd4bf;
+  --color-secondary-muted: #134e4a;
+
+  /* Accent colors - adjusted for dark mode */
+  --color-accent: #fb7185;
+  --color-accent-hover: #fda4af;
+  --color-accent-muted: #4c1d24;
+
+  /* Gray scale - darker variants */
   --color-muted: #27272a;
   --color-border: #3f3f46;
+  --color-border-hover: #52525b;
+
+  /* Surface colors for dark mode */
+  --color-surface: #18181b;
+  --color-surface-hover: #27272a;
 }
 
 body {
-  color: var(--color-foreground);
-  background: var(--color-background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-background text-foreground;
   transition:
-    background-color 0.3s,
-    color 0.3s;
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }

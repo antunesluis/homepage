@@ -2,6 +2,7 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 import { inter, poppins, robotoMono } from '../src/lib/fonts';
 import '../src/styles/globals.css';
+import { ThemeProvider } from 'next-themes';
 
 const preview: Preview = {
   parameters: {
@@ -13,19 +14,25 @@ const preview: Preview = {
     },
     backgrounds: {
       default: 'light',
-      values: [
-        { name: 'light', value: '#f9fafb' },
-        { name: 'dark', value: '#111827' },
+      list: [
+        { name: 'light', class: 'light', color: '#fafafa' },
+        { name: 'dark', class: 'dark', color: '#09090b' },
       ],
     },
   },
   decorators: [
     (Story) => (
-      <div
-        className={`${inter.variable} ${robotoMono.variable} ${poppins.variable}`}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="light"
+        enableSystem={false}
       >
-        <Story />
-      </div>
+        <div
+          className={`${inter.variable} ${robotoMono.variable} ${poppins.variable}`}
+        >
+          <Story />
+        </div>
+      </ThemeProvider>
     ),
   ],
 };

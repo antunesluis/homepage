@@ -1,0 +1,23 @@
+import Link from 'next/link';
+import { NavLinks } from '../NavLinks';
+import { ThemeToggle } from '@/components/ui/ThemeToggle';
+
+export function Header() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="mx-auto max-w-4xl px-6 h-16 flex items-center justify-between">
+        <Link
+          href="/"
+          className="text-foreground hover:text-foreground/80 transition-colors"
+        >
+          <span className="font-medium">Luis Fernando Antunes</span>
+        </Link>
+
+        <div className="flex items-center space-x-6">
+          <NavLinks />
+          <ThemeToggle />
+        </div>
+      </div>
+    </header>
+  );
+}
