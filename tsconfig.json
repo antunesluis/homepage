@@ -20,6 +20,7 @@
       "@/templates/*": ["src/templates/*"],
       "@/config/*": ["src/config/*"],
       "@/styles/*": ["src/styles/*"],
+      "@/icons/*": ["src/icons/*"],
       "@/api/*": ["src/api/*"]
     },
     "types": ["vitest/globals", "node", "@testing-library/jest-dom"],

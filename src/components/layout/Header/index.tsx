@@ -4,11 +4,11 @@ import { ThemeToggle } from '@/components/ui/ThemeToggle';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-foreground hover:text-foreground/80 transition-colors text-xl font-semibold font-sans"
+          className="text-foreground hover:text-foreground/80 transition-colors text-xl font-semibold"
         >
           Luis Fernando Antunes
         </Link>
