@@ -13,7 +13,7 @@ export function Hero() {
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tight">
                 <span className="text-foreground">
-                  Desenvolvedor Full-Stack
+                  Hey, I&apos;m Luis Antunes! 👋
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground">
@@ -43,7 +43,7 @@ export function Hero() {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 ring-4 ring-background">
+            <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 relative">
               <Image
                 src="/images/avatar.jpg"
                 alt="Developer"
