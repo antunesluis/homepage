@@ -55,13 +55,6 @@ export const Danger: Story = {
   },
 };
 
-export const Loading: Story = {
-  args: {
-    children: 'Loading',
-    isLoading: true,
-  },
-};
-
 export const WithLeftIcon: Story = {
   args: {
     children: 'Email me',

@@ -13,7 +13,7 @@ export function Hero() {
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tight">
                 <span className="text-foreground">
-                  Hey, I'm Luis Antunes! 👋
+                  Desenvolvedor Full-Stack
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground">
