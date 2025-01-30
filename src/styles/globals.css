@@ -33,33 +33,27 @@
 }
 
 .dark {
-  /* Dark theme */
-  --color-background: #09090b;
-  --color-foreground: #fafafa;
+  --color-background: #0f172a; /* Azul escuro mais suave */
+  --color-foreground: #f8fafc; /* Branco leitoso */
 
-  /* Primary colors - adjusted for dark mode */
-  --color-primary: #6366f1;
-  --color-primary-hover: #818cf8;
-  --color-primary-muted: #1e1b4b;
+  --color-primary: #7c3aed; /* Roxo vibrante */
+  --color-primary-hover: #6d28d9; /* Tom mais escuro */
+  --color-primary-muted: #312e81; /* Fundo com contraste */
 
-  /* Secondary colors - adjusted for dark mode */
-  --color-secondary: #14b8a6;
-  --color-secondary-hover: #2dd4bf;
-  --color-secondary-muted: #134e4a;
+  --color-secondary: #0ea5e9; /* Azul ciano */
+  --color-secondary-hover: #0284c7;
+  --color-secondary-muted: #164e63;
 
-  /* Accent colors - adjusted for dark mode */
-  --color-accent: #fb7185;
-  --color-accent-hover: #fda4af;
-  --color-accent-muted: #4c1d24;
+  --color-accent: #ef4444; /* Vermelho vivo */
+  --color-accent-hover: #dc2626;
+  --color-accent-muted: #7f1d1d;
 
-  /* Gray scale - darker variants */
-  --color-muted: #27272a;
-  --color-border: #3f3f46;
-  --color-border-hover: #52525b;
+  --color-muted: #1e293b; /* Tons de slate */
+  --color-border: #334155;
+  --color-border-hover: #475569;
 
-  /* Surface colors for dark mode */
-  --color-surface: #18181b;
-  --color-surface-hover: #27272a;
+  --color-surface: #1e293b; /* Superfície escura */
+  --color-surface-hover: #334155;
 }
 
 body {
@@ -67,4 +61,15 @@ body {
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
+}
+
+.nav-link {
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Efeito de "levantamento" sutil no hover */
+.nav-link:hover span:last-child {
+  transform: translateY(-1px);
 }

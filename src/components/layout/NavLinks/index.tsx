@@ -13,13 +13,11 @@ const navigationItems = [
 ];
 
 export function NavLinks() {
-  // // Pega a rota atual
   const pathname = usePathname();
-  // Estado para controlar qual item está com hover
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <nav className="hidden md:flex items-center gap-1">
+    <nav className="hidden md:flex items-center gap-6">
       {navigationItems.map((item, index) => {
         const isActive = pathname === item.href;
 
@@ -28,24 +26,28 @@ export function NavLinks() {
             key={item.href}
             href={item.href}
             className={cn(
-              'px-4 py-2 relative rounded-lg text-sm transition-colors duration-200',
+              'relative inline-flex flex-col items-center px-2 py-2',
+              'text-md transition-colors duration-200',
               'hover:text-foreground/80',
               isActive ? 'text-foreground font-medium' : 'text-foreground/60',
             )}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            {hoveredIndex === index && (
+            <span className="relative">
+              {item.label}
+              {/* Linha inferior */}
               <span
-                className="absolute inset-0 rounded-lg bg-muted -z-10"
+                className={cn(
+                  'absolute -bottom-1 left-0 w-full h-[2px] bg-primary',
+                  'origin-center transform scale-x-0 transition-all duration-200',
+                  hoveredIndex === index ? 'scale-x-100' : 'scale-x-0',
+                )}
                 style={{
-                  transform: 'translateX(0)',
-                  opacity: 1,
-                  transition: 'all 0.2s ease-in-out',
+                  transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
                 }}
               />
-            )}
-            {item.label}
+            </span>
           </Link>
         );
       })}

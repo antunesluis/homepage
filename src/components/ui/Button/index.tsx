@@ -60,7 +60,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           baseStyles,
           variantStyles[variant],
           sizeStyles[size],
-          fullWidth && 'w-full',
+          fullWidth ? 'w-full' : '',
           className,
         )}
         {...props}
