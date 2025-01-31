@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { SectionContainer } from '@/components/ui/SectionContainer';
-import { socialLinks } from '@/config/social-links';
+import { getHeroContent } from '@/lib/content-loader';
 import Image from 'next/image';
 
 export function Hero() {
+  const { title, subtitle, avatarUrl, avatarAlt, socialLinks } =
+    getHeroContent();
+
   return (
     <SectionContainer className="min-h-[calc(100vh-4rem)] flex items-center">
       <Container>
@@ -12,14 +15,9 @@ export function Hero() {
           <div className="flex flex-col space-y-6">
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tight">
-                <span className="text-foreground">
-                  Hey, I&apos;m Luis Antunes! 👋
-                </span>
+                <span className="text-foreground">{title}</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+              <p className="text-lg text-muted-foreground">{subtitle}</p>
             </div>
 
             <div className="flex gap-4 mt-4">
@@ -45,8 +43,8 @@ export function Hero() {
           <div className="flex justify-center md:justify-end">
             <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-gray-200 dark:border-gray-700 relative">
               <Image
-                src="/images/avatar.jpg"
-                alt="Developer"
+                src={avatarUrl}
+                alt={avatarAlt}
                 fill
                 priority
                 className="object-cover"

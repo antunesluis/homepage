@@ -21,9 +21,16 @@
       "@/config/*": ["src/config/*"],
       "@/styles/*": ["src/styles/*"],
       "@/icons/*": ["src/icons/*"],
+      "@/content/*": ["src/content/*"],
       "@/api/*": ["src/api/*"]
     },
-    "types": ["vitest/globals", "node", "@testing-library/jest-dom"],
+    "types": [
+      "vitest/globals",
+      "node",
+      "@testing-library/jest-dom",
+      "three",
+      "@react-three/fiber"
+    ],
     "plugins": [
       {
         "name": "next"

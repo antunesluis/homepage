@@ -7,6 +7,11 @@ export type ContainerProps = {
 };
 
 export const Container = ({ children, className }: ContainerProps) => {
+  // className={cn(
+  //   'mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 2xl:max-w-6xl',
+  //   className,
+  // )}
+
   return (
     <div className={cn('mx-auto max-w-4xl px-4 sm:px-6 lg:px-8', className)}>
       {children}

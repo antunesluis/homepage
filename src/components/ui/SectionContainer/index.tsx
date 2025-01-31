@@ -7,14 +7,16 @@ export type SectionContainerProps = {
 };
 
 export const SectionContainer = ({
+  id,
   children,
   className,
-}: SectionContainerProps) => {
+}: SectionContainerProps & { id?: string }) => {
   return (
-    <div
+    <section
+      id={id}
       className={cn('relative py-16 sm:py-24 md:py-32 scroll-mt-16', className)}
     >
       {children}
-    </div>
+    </section>
   );
 };

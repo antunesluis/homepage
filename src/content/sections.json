@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Hey, I'm Luis Antunes! 👋",
+    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "avatarUrl": "/images/avatar.jpg",
+    "avatarAlt": "/images/avatar.jpg",
+    "resumeUrl": "/resume.pdf"
+  },
+  "projects": [
+    {
+      "title": "Meu Projeto",
+      "description": "Descrição do projeto",
+      "technologies": ["React", "Node.js"],
+      "imageUrl": "/images/project.jpg",
+      "imageAlt": "/images/project.jpg",
+      "date": "2023-08"
+    }
+  ]
+}

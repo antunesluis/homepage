@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react';
 import type { LucideProps } from 'lucide-react';
 
 export function GithubIcon({ ...props }: LucideProps) {
@@ -38,4 +39,8 @@ export function LinkedinIcon({ ...props }: LucideProps) {
       />
     </svg>
   );
+}
+
+export function EmailIcon({ ...props }: LucideProps) {
+  return <Mail {...props} />;
 }
