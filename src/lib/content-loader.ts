@@ -1,11 +1,14 @@
 import { GithubIcon, LinkedinIcon, EmailIcon } from '@/config/icons';
 import SectionsContent from '@/content/sections.json';
-import SocialLinksContent from '@/content/social-links.json';
+import LinksContent from '@/content/links.json';
+import ConfigContent from '@/content/config-content.json';
 import {
   SocialLink,
   HeroSection,
   ProjectSection,
   SocialPlatform,
+  NavigationItems,
+  ConfigData,
 } from '@/types/content';
 import { LucideProps } from 'lucide-react';
 import { ReactElement } from 'react';
@@ -37,10 +40,18 @@ export function getProjects(): ProjectSection[] {
 }
 
 export function getSocialLinks(): SocialLink[] {
-  return SocialLinksContent.socialLinks.map((link) => ({
+  return LinksContent.socialLinks.map((link) => ({
     id: link.id as SocialPlatform,
     label: link.label,
     href: link.href as `https://${string}` | `mailto:${string}`,
     icon: getIconComponent(link.id as SocialPlatform),
   }));
+}
+
+export function getNavigationLinks(): NavigationItems[] {
+  return LinksContent.navigationLinks as NavigationItems[];
+}
+
+export function getConfigData(): ConfigData {
+  return ConfigContent as ConfigData;
 }

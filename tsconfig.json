@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -19,36 +15,16 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@/components/*": [
-        "src/components/*"
-      ],
-      "@/templates/*": [
-        "src/templates/*"
-      ],
-      "@/config/*": [
-        "src/config/*"
-      ],
-      "@/styles/*": [
-        "src/styles/*"
-      ],
-      "@/icons/*": [
-        "src/icons/*"
-      ],
-      "@/content/*": [
-        "src/content/*"
-      ],
-      "@/api/*": [
-        "src/api/*"
-      ]
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/templates/*": ["src/templates/*"],
+      "@/config/*": ["src/config/*"],
+      "@/styles/*": ["src/styles/*"],
+      "@/icons/*": ["src/icons/*"],
+      "@/content/*": ["src/content/*"],
+      "@/api/*": ["src/api/*"]
     },
-    "types": [
-      "vitest/globals",
-      "node",
-      "@testing-library/jest-dom"
-    ],
+    "types": ["vitest/globals", "node", "@testing-library/jest-dom"],
     "plugins": [
       {
         "name": "next"
@@ -62,9 +38,5 @@
     ".next/types/**/*.ts",
     "src/**/*"
   ],
-  "exclude": [
-    "node_modules",
-    "coverage",
-    "dist"
-  ]
+  "exclude": ["node_modules", "coverage", "dist"]
 }

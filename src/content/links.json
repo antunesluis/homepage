@@ -21,5 +21,11 @@
       "icon": "email",
       "showText": true
     }
+  ],
+  "navigationLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "Projetos", "href": "/projects" },
+    { "label": "Sobre", "href": "/about" },
+    { "label": "Contato", "href": "/contact" }
   ]
 }

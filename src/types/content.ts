@@ -10,6 +10,11 @@ export type SocialLink = {
   icon: (props: LucideProps) => ReactElement;
 };
 
+export type NavigationItems = {
+  label: string;
+  href: string;
+};
+
 export type HeroSection = {
   title: string;
   subtitle: string;
@@ -35,4 +40,9 @@ export type AboutSection = {
   title: string;
   description: string;
   skills: string[];
+};
+
+export type ConfigData = {
+  footerText: string;
+  logoText: string;
 };

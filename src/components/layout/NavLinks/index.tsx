@@ -4,21 +4,19 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
+import { NavigationItems } from '@/types/content';
 
-const navigationItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Projetos', href: '/projects' },
-  { label: 'Sobre', href: '/about' },
-  { label: 'Contato', href: '/contact' },
-];
+export type NavLinksProps = {
+  links: NavigationItems[];
+};
 
-export function NavLinks() {
+export function NavLinks({ links = [] }: NavLinksProps) {
   const pathname = usePathname();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <nav className="hidden md:flex items-center gap-6">
-      {navigationItems.map((item, index) => {
+      {links.map((item, index) => {
         const isActive = pathname === item.href;
 
         return (
@@ -40,7 +38,7 @@ export function NavLinks() {
               <span
                 className={cn(
                   'absolute -bottom-1 left-0 w-full h-[2px] bg-primary',
-                  'origin-center transform scale-x-0 transition-all duration-200',
+                  ' transform scale-x-0 transition-all duration-200',
                   hoveredIndex === index ? 'scale-x-100' : 'scale-x-0',
                 )}
                 style={{
