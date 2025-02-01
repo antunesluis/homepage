@@ -17,8 +17,8 @@
   --color-secondary-hover: #0f766e;
   --color-secondary-muted: #ccfbf1;
 
-  --color-accent: #f43f5e;
   /* Accent colors */
+  --color-accent: #f43f5e;
   --color-accent-hover: #e11d48;
   --color-accent-muted: #ffe4e6;
 
@@ -61,15 +61,4 @@ body {
   transition:
     background-color 0.3s ease-in-out,
     color 0.3s ease-in-out;
-}
-
-.nav-link {
-  transition:
-    color 0.3s ease,
-    transform 0.2s ease;
-}
-
-/* Efeito de "levantamento" sutil no hover */
-.nav-link:hover span:last-child {
-  transform: translateY(-1px);
 }

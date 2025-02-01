@@ -5,7 +5,7 @@ import { Container } from '@/components/ui/Container';
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 w-full bg-surface border-b dark:border-b-0 border-border/40 backdrop-blur supports-[backdrop-filter]:bg-surface/80">
       <Container className="h-16 flex items-center justify-between">
         <Link
           href="/"

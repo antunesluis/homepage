@@ -13,6 +13,7 @@ export type SocialLink = {
 export type HeroSection = {
   title: string;
   subtitle: string;
+  content: string;
   resumeUrl: string;
   avatarUrl: string;
   avatarAlt: string;
