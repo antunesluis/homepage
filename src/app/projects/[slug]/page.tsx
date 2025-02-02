@@ -4,13 +4,15 @@ import { ProjectDetails } from '@/components/ui/ProjectDetails';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { Container } from '@/components/ui/Container';
 
-export default function ProjectDetailsPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+type DynamicPageParams = {
+  params: Promise<{ slug: string }>;
+};
+
+export default async function Page({ params }: DynamicPageParams) {
+  const slug = (await params).slug;
+
   const { projects } = getProjects();
-  const project = projects.find((p) => p.slug === params.slug);
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     return notFound(); // Retorna um 404 se o projeto não for encontrado

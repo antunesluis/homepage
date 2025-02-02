@@ -27,7 +27,7 @@
         "liveUrl": "https://meuprojeto.com",
         "images": [
           {
-            "url": "/images/project-1.jpg",
+            "url": "/images/cover.png",
             "alt": "Imagem 1 do projeto"
           }
         ]
@@ -47,7 +47,7 @@
         "liveUrl": "https://meuprojeto.com",
         "images": [
           {
-            "url": "/images/project-1.jpg",
+            "url": "/images/cover.png",
             "alt": "Imagem 1 do projeto"
           }
         ]
@@ -67,7 +67,7 @@
         "liveUrl": "https://meuprojeto.com",
         "images": [
           {
-            "url": "/images/project-1.jpg",
+            "url": "/images/cover.png",
             "alt": "Imagem 1 do projeto"
           }
         ]
@@ -87,7 +87,7 @@
         "liveUrl": "https://meuprojeto.com",
         "images": [
           {
-            "url": "/images/project-1.jpg",
+            "url": "/images/cover.png",
             "alt": "Imagem 1 do projeto"
           }
         ]
