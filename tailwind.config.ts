@@ -3,6 +3,7 @@ import type { Config } from 'tailwindcss';
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/templates/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -10,7 +11,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Main colors
+        heading: 'var(--color-text-heading)',
+        body: 'var(--color-text-body)',
+        muted: 'var(--color-text-muted)',
+
         primary: {
           DEFAULT: 'var(--color-primary)',
           hover: 'var(--color-primary-hover)',
@@ -27,10 +31,8 @@ export default {
           muted: 'var(--color-accent-muted)',
         },
 
-        // Base colors
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
-        muted: 'var(--color-muted)',
         border: {
           DEFAULT: 'var(--color-border)',
           hover: 'var(--color-border-hover)',
@@ -39,6 +41,22 @@ export default {
           DEFAULT: 'var(--color-surface)',
           hover: 'var(--color-surface-hover)',
         },
+      },
+      fontFamily: {
+        heading: 'var(--font-heading)',
+        body: 'var(--font-body)',
+      },
+      fontSize: {
+        '4xl': 'var(--text-4xl)',
+        '3xl': 'var(--text-3xl)',
+        '2xl': 'var(--text-2xl)',
+        xl: 'var(--text-xl)',
+        lg: 'var(--text-lg)',
+        base: 'var(--text-base)',
+      },
+      spacing: {
+        'section-gap': 'var(--section-gap)',
+        'element-gap': 'var(--element-gap)',
       },
     },
   },

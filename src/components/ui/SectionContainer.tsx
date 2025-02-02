@@ -15,7 +15,7 @@ export const SectionContainer = ({
     <section
       id={id}
       className={cn(
-        'min-h-[calc(100vh-4rem)] flex relative py-16 sm:py-24 md:py-32 scroll-mt-16',
+        'min-h-[calc(100vh-4rem)] flex relative py-8 sm:py-16 md:py-24 scroll-mt-16',
         className,
       )}
     >

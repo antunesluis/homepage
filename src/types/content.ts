@@ -22,15 +22,6 @@ export type ImageData = {
   height?: number;
 };
 
-export type HeroSection = {
-  title: string;
-  subtitle: string;
-  content: string;
-  resumeUrl: string;
-  avatarImage: ImageData;
-  socialLinks: SocialLink[];
-};
-
 export type ProjectCard = {
   title: string;
   introduction: string;
@@ -48,8 +39,19 @@ export type ProjectDetails = {
 } & ProjectCard;
 
 export type ProjectSection = {
+  config: PageConfig;
   title: string;
   projects: ProjectDetails[];
+};
+
+export type HeroSection = {
+  title: string;
+  subtitle: string;
+  content: string;
+  resumeUrl: string;
+  avatarImage: ImageData;
+  socialLinks: SocialLink[];
+  config: PageConfig;
 };
 
 export type AboutSection = {
@@ -58,7 +60,13 @@ export type AboutSection = {
   skills: string[];
 };
 
-export type ConfigData = {
+export type PageConfig = {
   footerText: string;
   logoText: string;
+  navigationLinks: NavigationItem[];
+};
+
+export type PageContent<T> = {
+  config: PageConfig;
+  content: T;
 };

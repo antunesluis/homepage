@@ -1,4 +1,9 @@
 {
   "footerText": "© 2025 Luis Antunes. All Rights Reserved.",
-  "logoText": "Luis Antunes"
+  "logoText": "Luis Antunes",
+  "navigationLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "Projetos", "href": "/projects" },
+    { "label": "Sobre", "href": "/about" }
+  ]
 }

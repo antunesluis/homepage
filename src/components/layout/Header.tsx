@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { NavLinks } from '../NavLinks';
+import { NavLinks } from './NavLinks';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { Container } from '@/components/ui/Container';
 import { NavigationItem } from '@/types/content';

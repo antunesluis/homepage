@@ -8,7 +8,7 @@ import {
   ProjectSection,
   SocialPlatform,
   NavigationItem,
-  ConfigData,
+  PageConfig,
 } from '@/types/content';
 import { LucideProps } from 'lucide-react';
 import { ReactElement } from 'react';
@@ -38,20 +38,24 @@ export function getSocialLinks(): SocialLink[] {
 }
 
 export function getNavigationLinks(): NavigationItem[] {
-  return LinksContent.navigationLinks as NavigationItem[];
+  return ConfigContent.navigationLinks as NavigationItem[];
 }
 
-export function getConfigData(): ConfigData {
-  return ConfigContent as ConfigData;
+export function getPageConfig(): PageConfig {
+  return ConfigContent as PageConfig;
 }
 
 export function getHeroContent(): HeroSection {
   return {
     ...SectionsContent.hero,
     socialLinks: getSocialLinks(),
-  };
+    config: getPageConfig(),
+  } as HeroSection;
 }
 
 export function getProjects(): ProjectSection {
-  return SectionsContent.projects as ProjectSection;
+  return {
+    ...SectionsContent.projects,
+    config: getPageConfig(),
+  } as ProjectSection;
 }

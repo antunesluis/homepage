@@ -1,8 +1,7 @@
 import { notFound } from 'next/navigation';
-import { getProjects } from '@/lib/content-loader';
+import { getProjects, getPageConfig } from '@/lib/content-loader';
 import { ProjectDetails } from '@/components/ui/ProjectDetails';
-import { SectionContainer } from '@/components/ui/SectionContainer';
-import { Container } from '@/components/ui/Container';
+import { Base } from '@/templates/Base';
 
 type DynamicPageParams = {
   params: Promise<{ slug: string }>;
@@ -12,6 +11,7 @@ export default async function Page({ params }: DynamicPageParams) {
   const slug = (await params).slug;
 
   const { projects } = getProjects();
+  const pageConfig = getPageConfig();
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
@@ -19,10 +19,8 @@ export default async function Page({ params }: DynamicPageParams) {
   }
 
   return (
-    <SectionContainer>
-      <Container>
-        <ProjectDetails project={project} />
-      </Container>
-    </SectionContainer>
+    <Base {...pageConfig}>
+      <ProjectDetails project={project} />
+    </Base>
   );
 }
