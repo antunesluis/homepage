@@ -18,7 +18,67 @@
         "description": "Descrição detalhada do projeto",
         "technologies": ["React", "Node.js"],
         "coverImage": {
-          "url": "/images/project.jpg",
+          "url": "/images/cover.png",
+          "alt": "Imagem do projeto"
+        },
+        "date": "2023-08-01",
+        "slug": "meu-projeto",
+        "githubUrl": "https://github.com/seuuser/meu-projeto",
+        "liveUrl": "https://meuprojeto.com",
+        "images": [
+          {
+            "url": "/images/project-1.jpg",
+            "alt": "Imagem 1 do projeto"
+          }
+        ]
+      },
+      {
+        "title": "Meu Projeto",
+        "introduction": "Introdução do projeto",
+        "description": "Descrição detalhada do projeto",
+        "technologies": ["React", "Node.js"],
+        "coverImage": {
+          "url": "/images/cover.png",
+          "alt": "Imagem do projeto"
+        },
+        "date": "2023-08-01",
+        "slug": "meu-projeto",
+        "githubUrl": "https://github.com/seuuser/meu-projeto",
+        "liveUrl": "https://meuprojeto.com",
+        "images": [
+          {
+            "url": "/images/project-1.jpg",
+            "alt": "Imagem 1 do projeto"
+          }
+        ]
+      },
+      {
+        "title": "Meu Projeto",
+        "introduction": "Introdução do projeto",
+        "description": "Descrição detalhada do projeto",
+        "technologies": ["React", "Node.js"],
+        "coverImage": {
+          "url": "/images/cover.png",
+          "alt": "Imagem do projeto"
+        },
+        "date": "2023-08-01",
+        "slug": "meu-projeto",
+        "githubUrl": "https://github.com/seuuser/meu-projeto",
+        "liveUrl": "https://meuprojeto.com",
+        "images": [
+          {
+            "url": "/images/project-1.jpg",
+            "alt": "Imagem 1 do projeto"
+          }
+        ]
+      },
+      {
+        "title": "Meu Projeto",
+        "introduction": "Introdução do projeto",
+        "description": "Descrição detalhada do projeto",
+        "technologies": ["React", "Node.js"],
+        "coverImage": {
+          "url": "/images/cover.png",
           "alt": "Imagem do projeto"
         },
         "date": "2023-08-01",

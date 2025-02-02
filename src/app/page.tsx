@@ -20,13 +20,3 @@ export default function Home() {
     </>
   );
 }
-
-// import { ProjectCard } from '@/components/ui/ProjectCard';
-//
-// export default function Home() {
-//   return (
-//     <>
-//       <ProjectCard />
-//     </>
-//   );
-// }
