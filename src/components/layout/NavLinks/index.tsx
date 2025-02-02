@@ -4,10 +4,10 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
-import { NavigationItems } from '@/types/content';
+import { NavigationItem } from '@/types/content';
 
 export type NavLinksProps = {
-  links: NavigationItems[];
+  links: NavigationItem[];
 };
 
 export function NavLinks({ links = [] }: NavLinksProps) {

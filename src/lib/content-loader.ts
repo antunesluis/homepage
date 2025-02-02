@@ -7,7 +7,7 @@ import {
   HeroSection,
   ProjectSection,
   SocialPlatform,
-  NavigationItems,
+  NavigationItem,
   ConfigData,
 } from '@/types/content';
 import { LucideProps } from 'lucide-react';
@@ -28,17 +28,6 @@ const getIconComponent = (
   }
 };
 
-export function getHeroContent(): HeroSection {
-  return {
-    ...SectionsContent.hero,
-    socialLinks: getSocialLinks(),
-  };
-}
-
-export function getProjects(): ProjectSection[] {
-  return SectionsContent.projects as ProjectSection[];
-}
-
 export function getSocialLinks(): SocialLink[] {
   return LinksContent.socialLinks.map((link) => ({
     id: link.id as SocialPlatform,
@@ -48,10 +37,21 @@ export function getSocialLinks(): SocialLink[] {
   }));
 }
 
-export function getNavigationLinks(): NavigationItems[] {
-  return LinksContent.navigationLinks as NavigationItems[];
+export function getNavigationLinks(): NavigationItem[] {
+  return LinksContent.navigationLinks as NavigationItem[];
 }
 
 export function getConfigData(): ConfigData {
   return ConfigContent as ConfigData;
+}
+
+export function getHeroContent(): HeroSection {
+  return {
+    ...SectionsContent.hero,
+    socialLinks: getSocialLinks(),
+  };
+}
+
+export function getProjects(): ProjectSection {
+  return SectionsContent.projects as ProjectSection;
 }

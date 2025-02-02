@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { NavLinks } from '../NavLinks';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { Container } from '@/components/ui/Container';
-import { NavigationItems } from '@/types/content';
+import { NavigationItem } from '@/types/content';
 
 export type HeaderProps = {
-  links: NavigationItems[];
+  links: NavigationItem[];
   logoText: string;
 };
 

@@ -1,20 +1,37 @@
 {
   "hero": {
-    "title": "Hey, I'm Luis Antunes! ",
+    "title": "Hey, I'm Luis Antunes!",
     "subtitle": "Full Stack Developer",
-    "content": "Olá! Sou um estudante apaixonado por tecnologia, cursando o 4º semestre de Ciência da Computação na Universidade Federal de Santa Maria. ",
-    "avatarUrl": "/images/avatar2.png",
-    "avatarAlt": "/images/avatar.jpg",
-    "resumeUrl": "/resume.pdf"
-  },
-  "projects": [
-    {
-      "title": "Meu Projeto",
-      "description": "Descrição do projeto",
-      "technologies": ["React", "Node.js"],
-      "imageUrl": "/images/project.jpg",
-      "imageAlt": "/images/project.jpg",
-      "date": "2023-08"
+    "content": "Olá! Sou um estudante apaixonado por tecnologia, cursando o 4º semestre de Ciência da Computação na Universidade Federal de Santa Maria.",
+    "resumeUrl": "https://example.com/resume.pdf",
+    "avatarImage": {
+      "url": "/images/avatar2.jpg",
+      "alt": "Luis Antunes Avatar"
     }
-  ]
+  },
+  "projects": {
+    "title": "Projetos Destacados",
+    "projects": [
+      {
+        "title": "Meu Projeto",
+        "introduction": "Introdução do projeto",
+        "description": "Descrição detalhada do projeto",
+        "technologies": ["React", "Node.js"],
+        "coverImage": {
+          "url": "/images/project.jpg",
+          "alt": "Imagem do projeto"
+        },
+        "date": "2023-08-01",
+        "slug": "meu-projeto",
+        "githubUrl": "https://github.com/seuuser/meu-projeto",
+        "liveUrl": "https://meuprojeto.com",
+        "images": [
+          {
+            "url": "/images/project-1.jpg",
+            "alt": "Imagem 1 do projeto"
+          }
+        ]
+      }
+    ]
+  }
 }

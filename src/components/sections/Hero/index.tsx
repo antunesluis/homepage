@@ -10,14 +10,14 @@ export type HeroProps = {
 };
 
 export function Hero({ data }: HeroProps) {
-  const { title, subtitle, content, avatarUrl, avatarAlt, socialLinks } = data;
+  const { title, subtitle, content, avatarImage, socialLinks } = data;
 
   return (
     <SectionContainer className="min-h-[calc(100vh-4rem)] flex items-center">
       <Container>
         <div className="w-full grid grid-cols-1 md:grid-cols-[1fr,auto] gap-10 items-center">
           <HeroContent title={title} subtitle={subtitle} content={content} />
-          <Avatar src={avatarUrl} alt={avatarAlt} />
+          <Avatar src={avatarImage.url} alt={avatarImage.alt} />
         </div>
 
         <div className="flex gap-4 mt-4 items-center">

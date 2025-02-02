@@ -10,9 +10,16 @@ export type SocialLink = {
   icon: (props: LucideProps) => ReactElement;
 };
 
-export type NavigationItems = {
+export type NavigationItem = {
   label: string;
-  href: string;
+  href: `/${string}`;
+};
+
+export type ImageData = {
+  url: string;
+  alt: string;
+  width?: number;
+  height?: number;
 };
 
 export type HeroSection = {
@@ -20,20 +27,29 @@ export type HeroSection = {
   subtitle: string;
   content: string;
   resumeUrl: string;
-  avatarUrl: string;
-  avatarAlt: string;
+  avatarImage: ImageData;
   socialLinks: SocialLink[];
 };
 
-export type ProjectSection = {
+export type ProjectCard = {
   title: string;
-  description: string;
+  introduction: string;
   technologies: string[];
-  imageUrl: string;
-  imageAlt: string;
+  coverImage: ImageData;
+  date: `${number}-${number}-${number}`; // Formato: YYYY-MM-DD
+  slug: string;
+};
+
+export type ProjectDetails = {
+  description: string;
   githubUrl?: `https://${string}`;
   liveUrl?: `https://${string}`;
-  date: string; // Formato: YYYY-MM
+  images?: ImageData[];
+} & ProjectCard;
+
+export type ProjectSection = {
+  title: string;
+  projects: ProjectDetails[];
 };
 
 export type AboutSection = {
