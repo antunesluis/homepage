@@ -10,15 +10,8 @@ type ProjectDetailsProps = {
 };
 
 export function ProjectDetails({ project }: ProjectDetailsProps) {
-  const {
-    title,
-    introduction,
-    description,
-    technologies,
-    githubUrl,
-    liveUrl,
-    images,
-  } = project;
+  const { title, introduction, description, githubUrl, liveUrl, images } =
+    project;
 
   return (
     <SectionContainer>
