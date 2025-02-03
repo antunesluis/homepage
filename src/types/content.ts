@@ -1,7 +1,11 @@
 import type { LucideProps } from 'lucide-react';
 import type { ReactElement } from 'react';
 
+export type URLString = `https://${string}` | `mailto:${string}`;
+export type DateString = `${number}-${number}-${number}`; // YYYY-MM-DD
+
 export type SocialPlatform = 'github' | 'linkedin' | 'email';
+export type Technology = 'Javascript' | 'next' | 'neovim';
 
 export type SocialLink = {
   id: SocialPlatform;
@@ -10,9 +14,23 @@ export type SocialLink = {
   icon: (props: LucideProps) => ReactElement;
 };
 
+export type ToolBoxElement = {
+  id: Technology;
+  label: string;
+  href: `https://${string}`;
+  icon: (props: LucideProps) => ReactElement;
+};
+
 export type NavigationItem = {
   label: string;
   href: `/${string}`;
+  external?: boolean;
+};
+
+export type PageConfig = {
+  footerText: string;
+  logoText: string;
+  navigationLinks: NavigationItem[];
 };
 
 export type ImageData = {
@@ -25,7 +43,7 @@ export type ImageData = {
 export type ProjectCard = {
   title: string;
   introduction: string;
-  technologies: string[];
+  technologies: Technology[];
   coverImage: ImageData;
   date: `${number}-${number}-${number}`; // Formato: YYYY-MM-DD
   slug: string;
@@ -54,19 +72,31 @@ export type HeroSection = {
   config: PageConfig;
 };
 
-export type AboutSection = {
+export type TimeLine = {
+  title: string;
+  events: {
+    date: DateString;
+    text: string;
+  }[];
+};
+
+export type ToolBox = {
   title: string;
   description: string;
-  skills: string[];
+  technologies: ToolBoxElement[];
 };
 
-export type PageConfig = {
-  footerText: string;
-  logoText: string;
-  navigationLinks: NavigationItem[];
+export type WhoIAm = {
+  name: string;
+  apresentation: string;
+  avatarImage: ImageData;
 };
 
-export type PageContent<T> = {
+export type AboutSection = {
   config: PageConfig;
-  content: T;
+  title: string;
+  whoIAm: WhoIAm;
+  toolbox: ToolBox;
+  timeline: TimeLine;
+  socialLinks: SocialLink[];
 };

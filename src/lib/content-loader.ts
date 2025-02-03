@@ -9,6 +9,7 @@ import {
   SocialPlatform,
   NavigationItem,
   PageConfig,
+  AboutSection,
 } from '@/types/content';
 import { LucideProps } from 'lucide-react';
 import { ReactElement } from 'react';
@@ -58,4 +59,11 @@ export function getProjects(): ProjectSection {
     ...SectionsContent.projects,
     config: getPageConfig(),
   } as ProjectSection;
+}
+
+export function getAboutSection(): AboutSection {
+  return {
+    ...SectionsContent.about,
+    config: getPageConfig(),
+  } as AboutSection;
 }

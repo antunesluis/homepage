@@ -93,5 +93,58 @@
         ]
       }
     ]
+  },
+  "about": {
+    "title": "About Me",
+    "whoIAm": {
+      "name": "Luis Fernando Antunes",
+      "apresentation": "Sou um desenvolvedor full-stack apaixonado por criar soluções inovadoras. Com formação em Ciência da Computação na UFSM, combino conhecimentos técnicos sólidos com uma abordagem criativa para resolver problemas complexos.",
+      "avatarImage": {
+        "url": "/images/avatar.jpg",
+        "alt": "Luis Antunes Avatar"
+      }
+    },
+    "toolbox": {
+      "title": "My Toolbox",
+      "description": "Aqui estão as principais tecnologias que utilizo no meu dia a dia:",
+      "technologies": [
+        {
+          "id": "Javascript",
+          "label": "JavaScript",
+          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+        },
+        {
+          "id": "next",
+          "label": "Next.js",
+          "href": "https://nextjs.org/"
+        },
+        {
+          "id": "neovim",
+          "label": "Neovim",
+          "href": "https://neovim.io/"
+        }
+      ]
+    },
+    "timeline": {
+      "title": "My Journey",
+      "events": [
+        {
+          "date": "2001-01-01",
+          "text": "Nascido em Santa Maria, RS"
+        },
+        {
+          "date": "2019-12-15",
+          "text": "Formado pelo Colégio Tiradentes da Brigada Militar"
+        },
+        {
+          "date": "2022-03-01",
+          "text": "Ingresso em Ciência da Computação na UFSM"
+        },
+        {
+          "date": "2023-08-01",
+          "text": "Primeiro Projeto Profissional: Desenvolvimento de sistema de gestão para startup local"
+        }
+      ]
+    }
   }
 }
