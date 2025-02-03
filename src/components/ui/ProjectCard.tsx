@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { ProjectCard } from '@/types/content';
+import { Heading, Paragraph } from '@/components/ui/Typography';
 
 type ProjectCardProps = {
   project: ProjectCard;
@@ -12,21 +13,23 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${slug}`}>
       <div className="bg-surface rounded-lg border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-        <div className="relative h-60 mx-2 my-3">
-          <Image
-            src={coverImage.url}
-            alt={coverImage.alt}
-            fill
-            className="object-cover rounded-lg"
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
+        <div className="relative h-60 mx-2 my-3 overflow-hidden">
+          <div className="group relative h-full w-full">
+            <Image
+              src={coverImage.url}
+              alt={coverImage.alt}
+              fill
+              className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
 
-        <div className="p-6 space-y-3">
-          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <p className="text-muted-foreground line-clamp-2">{introduction}</p>
+        <div className="p-4 py-2 space-y-3">
+          <Heading level="h3">{title}</Heading>
+          <Paragraph variant="muted">{introduction}</Paragraph>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 py-5">
             {technologies.map((tech) => (
               <span
                 key={tech}

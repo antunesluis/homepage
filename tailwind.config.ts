@@ -14,6 +14,7 @@ export default {
         heading: 'var(--color-text-heading)',
         body: 'var(--color-text-body)',
         muted: 'var(--color-text-muted)',
+        mutedElement: 'var(--color-muted)',
 
         primary: {
           DEFAULT: 'var(--color-primary)',

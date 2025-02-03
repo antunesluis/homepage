@@ -1,3 +1,5 @@
+import { Heading, Paragraph } from '@/components/ui/Typography';
+
 type HeroContentProps = {
   title: string;
   subtitle: string;
@@ -7,11 +9,11 @@ type HeroContentProps = {
 export function HeroContent({ title, subtitle, content }: HeroContentProps) {
   return (
     <div className="flex flex-col space-y-6">
-      <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      <Heading level="h1" gradient>
         {title}
-      </h1>
-      <p className="text-md text-muted-foreground">{subtitle}</p>
-      <p className="text-lg">{content}</p>
+      </Heading>
+      <Paragraph variant="muted">{subtitle}</Paragraph>
+      <Paragraph>{content}</Paragraph>
     </div>
   );
 }

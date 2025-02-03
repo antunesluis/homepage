@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button';
 import type { ProjectDetails } from '@/types/content';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { Container } from '@/components/ui/Container';
+import { Heading, Paragraph } from '@/components/ui/Typography';
 
 type ProjectDetailsProps = {
   project: ProjectDetails;
@@ -25,21 +26,22 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
         <div className="space-y-8">
           {/* Título e Introdução */}
           <div className="space-y-4">
-            <h1 className="text-3xl font-bold text-foreground">{title}</h1>
-            <p className="text-lg text-muted-foreground">{introduction}</p>
+            <Heading level="h2" className="font-bold">
+              {title}
+            </Heading>
+            <Paragraph variant="muted">{introduction}</Paragraph>
           </div>
 
-          {/* Tecnologias */}
-          <div className="flex flex-wrap gap-2">
-            {technologies.map((tech) => (
-              <span
-                key={tech}
-                className="px-2 py-1 text-sm bg-border rounded-full dark:bg-surface-hover"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
+          {/* <div className="flex flex-wrap gap-2"> */}
+          {/*   {technologies.map((tech) => ( */}
+          {/*     <span */}
+          {/*       key={tech} */}
+          {/*       className="px-2 py-1 text-sm bg-border border-border-hover border rounded-full dark:bg-surface-hover" */}
+          {/*     > */}
+          {/*       {tech} */}
+          {/*     </span> */}
+          {/*   ))} */}
+          {/* </div> */}
 
           {/* Botões */}
           <div className="flex gap-4">
@@ -68,9 +70,7 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
           )}
 
           {/* Descrição */}
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            {description}
-          </p>
+          <Paragraph>{description}</Paragraph>
         </div>
       </Container>
     </SectionContainer>
