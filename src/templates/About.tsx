@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container';
 import { Toolbox } from '@/components/layout/Toolbox';
 import { SocialLinks } from '@/components/ui/SocialLinks';
 import { Button } from '@/components/ui/Button';
+import { ArrowUpRight, ArrowDownToLine } from 'lucide-react';
 
 export type AboutProps = {
   data: AboutSection;
@@ -57,16 +58,22 @@ export function About({ data }: AboutProps) {
               <Button
                 variant="secondary"
                 size="lg"
+                href="/docs/resume.pdf"
+                external
                 className="flex-1 sm:flex-none"
               >
                 Download Resume
+                <ArrowDownToLine />
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
+                href="https://github.com/antunesluis/portfolio"
+                external
                 className="flex-1 sm:flex-none"
               >
                 View Source Code
+                <ArrowUpRight />
               </Button>
             </div>
           </div>

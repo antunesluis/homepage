@@ -1,6 +1,7 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 import { forwardRef } from 'react';
+import Link from 'next/link';
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center rounded-lg font-medium transition-colors duration-200 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:translate-y-[1px]',
@@ -41,6 +42,8 @@ export interface ButtonProps
     VariantProps<typeof buttonVariants> {
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  href?: string;
+  external?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -53,11 +56,34 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       leftIcon,
       rightIcon,
       children,
+      href,
+      external = false,
       type = 'button',
       ...props
     },
     ref,
   ) => {
+    if (href) {
+      const LinkComponent = external ? 'a' : Link;
+
+      return (
+        <LinkComponent
+          href={href}
+          className={cn(
+            buttonVariants({ variant, size, fullWidth, className }),
+          )}
+          {...(external && {
+            target: '_blank',
+            rel: 'noopener noreferrer',
+          })}
+        >
+          {leftIcon}
+          {children}
+          {rightIcon}
+        </LinkComponent>
+      );
+    }
+
     return (
       <button
         type={type}
