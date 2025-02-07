@@ -4,22 +4,36 @@
       "id": "github",
       "label": "GitHub",
       "href": "https://github.com/seuuser",
-      "icon": "github",
       "showText": true
     },
     {
       "id": "linkedin",
       "label": "LinkedIn",
       "href": "https://linkedin.com/in/seuuser",
-      "icon": "linkedin",
       "showText": true
     },
     {
       "id": "email",
       "label": "E-mail",
       "href": "mailto:seuemail@example.com",
-      "icon": "email",
       "showText": true
+    }
+  ],
+  "technologies": [
+    {
+      "id": "typescript",
+      "label": "typescript",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "id": "node",
+      "label": "Next.js",
+      "href": "https://nextjs.org/"
+    },
+    {
+      "id": "node",
+      "label": "Neovim",
+      "href": "https://neovim.io/"
     }
   ]
 }

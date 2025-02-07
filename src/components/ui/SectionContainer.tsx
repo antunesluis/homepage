@@ -23,3 +23,18 @@ export const SectionContainer = ({
     </section>
   );
 };
+
+// export function SectionContainer({ children, className, ...props }: SectionContainerProps) {
+//   return (
+//     <section
+//       className={cn(
+//         'py-16 sm:py-20 md:py-24 relative',
+//         'first:pt-32 last:pb-32',
+//         className
+//       )}
+//       {...props}
+//     >
+//       {children}
+//     </section>
+//   );
+// }

@@ -2,6 +2,7 @@ import { ProjectsGrid } from '@/components/layout/ProjectsGrid';
 import { Container } from '@/components/ui/Container';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { ProjectSection } from '@/types/content';
+import { Heading, Paragraph } from '@/components/ui/Typography';
 import { Base } from '@/templates/Base';
 
 export type ProjectsPageProps = {
@@ -9,13 +10,19 @@ export type ProjectsPageProps = {
 };
 
 export default function Projects({ data }: ProjectsPageProps) {
-  const { projects, title, config } = data;
-
+  const { projects, title, subtitle, config } = data;
   return (
     <Base {...config}>
       <SectionContainer>
         <Container>
-          <h1 className="text-3xl font-bold text-foreground mb-8">{title}</h1>
+          <div className="mb-16 relative pb-8 text-center">
+            <Heading level="h1" className="mb-4">
+              {title}
+            </Heading>
+            <Paragraph variant="muted">{subtitle}</Paragraph>
+            {/* Linha separadora */}
+            <div className="absolute bottom-0 left-1/2 w-1/3 h-px bg-border -translate-x-1/2" />
+          </div>
           <ProjectsGrid projects={projects} />
         </Container>
       </SectionContainer>

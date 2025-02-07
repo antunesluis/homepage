@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, EmailIcon } from '@/config/icons';
+import * as Icons from '@/config/icons';
 import SectionsContent from '@/content/sections.json';
 import LinksContent from '@/content/links.json';
 import ConfigContent from '@/content/config-content.json';
@@ -10,20 +10,42 @@ import {
   NavigationItem,
   PageConfig,
   AboutSection,
+  Technology,
+  ToolBoxElement,
+  ToolBox,
 } from '@/types/content';
 import { LucideProps } from 'lucide-react';
 import { ReactElement } from 'react';
 
-const getIconComponent = (
+const getSocialIconComponent = (
   id: SocialPlatform,
 ): ((props: LucideProps) => ReactElement) => {
   switch (id) {
     case 'github':
-      return GithubIcon;
+      return Icons.GithubIcon;
     case 'linkedin':
-      return LinkedinIcon;
+      return Icons.LinkedinIcon;
     case 'email':
-      return EmailIcon;
+      return Icons.EmailIcon;
+    default:
+      throw new Error(`Ícone não encontrado para: ${id}`);
+  }
+};
+
+const getTechIconComponent = (
+  id: Technology,
+): ((props: LucideProps) => ReactElement) => {
+  switch (id) {
+    case 'typescript':
+      return Icons.TypescriptIcon;
+    // case 'react':
+    //   return Icons.ReactIcon;
+    case 'node':
+      return Icons.NodeIcon;
+    // case 'next':
+    //   return Icons.NextJsIcon;
+    // case 'neovim':
+    //   return Icons.NeovimIcon;
     default:
       throw new Error(`Ícone não encontrado para: ${id}`);
   }
@@ -34,7 +56,16 @@ export function getSocialLinks(): SocialLink[] {
     id: link.id as SocialPlatform,
     label: link.label,
     href: link.href as `https://${string}` | `mailto:${string}`,
-    icon: getIconComponent(link.id as SocialPlatform),
+    icon: getSocialIconComponent(link.id as SocialPlatform),
+  }));
+}
+
+export function getTechnologies(): ToolBoxElement[] {
+  return LinksContent.technologies.map((link) => ({
+    id: link.id as Technology,
+    label: link.label,
+    href: link.href as `https://${string}`,
+    icon: getTechIconComponent(link.id as Technology),
   }));
 }
 
@@ -44,6 +75,13 @@ export function getNavigationLinks(): NavigationItem[] {
 
 export function getPageConfig(): PageConfig {
   return ConfigContent as PageConfig;
+}
+
+export function getToolbox(): ToolBox {
+  return {
+    ...SectionsContent.about.toolbox,
+    technologies: getTechnologies(),
+  };
 }
 
 export function getHeroContent(): HeroSection {
@@ -65,5 +103,7 @@ export function getAboutSection(): AboutSection {
   return {
     ...SectionsContent.about,
     config: getPageConfig(),
+    socialLinks: getSocialLinks(),
+    toolbox: getToolbox(),
   } as AboutSection;
 }

@@ -13,7 +13,7 @@ const buttonVariants = cva(
           'bg-secondary hover:bg-secondary-hover text-white focus-visible:ring-secondary/50',
         outline:
           'border border-border hover:border-border-hover hover:bg-muted bg-transparent',
-        ghost: 'hover:bg-mutedElement bg-transparent',
+        ghost: 'hover:bg-surface bg-transparent',
         link: 'text-primary hover:text-primary-hover underline-offset-4 hover:underline bg-transparent p-0 h-auto',
         danger:
           'bg-accent hover:bg-accent-hover text-white focus-visible:ring-accent/50',

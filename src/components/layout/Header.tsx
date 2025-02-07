@@ -11,7 +11,7 @@ export type HeaderProps = {
 
 export function Header({ links = [], logoText }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-50 w-full bg-surface border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-surface/80 dark:border-b-0 dark:bg-background">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-border/40 backdrop-blur supports-[backdrop-filter]:bg-surface/80 dark:border-b-0 dark:bg-background">
       <Container className="h-16 flex items-center justify-between border-border">
         <Link
           href="/"

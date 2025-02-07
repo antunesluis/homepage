@@ -5,7 +5,14 @@ export type URLString = `https://${string}` | `mailto:${string}`;
 export type DateString = `${number}-${number}-${number}`; // YYYY-MM-DD
 
 export type SocialPlatform = 'github' | 'linkedin' | 'email';
-export type Technology = 'Javascript' | 'next' | 'neovim';
+
+export type Technology =
+  | 'typescript'
+  | 'react'
+  | 'node'
+  | 'javascript'
+  | 'next'
+  | 'neovim';
 
 export type SocialLink = {
   id: SocialPlatform;
@@ -59,6 +66,7 @@ export type ProjectDetails = {
 export type ProjectSection = {
   config: PageConfig;
   title: string;
+  subtitle: string;
   projects: ProjectDetails[];
 };
 
@@ -87,16 +95,17 @@ export type ToolBox = {
 };
 
 export type WhoIAm = {
-  name: string;
+  title: string;
   apresentation: string;
-  avatarImage: ImageData;
 };
 
 export type AboutSection = {
-  config: PageConfig;
   title: string;
+  subtitle: string;
+  avatarImage: ImageData;
   whoIAm: WhoIAm;
   toolbox: ToolBox;
   timeline: TimeLine;
   socialLinks: SocialLink[];
+  config: PageConfig;
 };
