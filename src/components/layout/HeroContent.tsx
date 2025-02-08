@@ -8,12 +8,14 @@ type HeroContentProps = {
 
 export function HeroContent({ title, subtitle, content }: HeroContentProps) {
   return (
-    <div className="flex flex-col space-y-6">
+    <div className="flex flex-col space-y-4 sm:space-y-6">
       <Heading level="h1" gradient>
         {title}
       </Heading>
-      <Paragraph variant="muted">{subtitle}</Paragraph>
-      <Paragraph>{content}</Paragraph>
+      <Paragraph variant="muted" className="text-lg sm:text-xl">
+        {subtitle}
+      </Paragraph>
+      <Paragraph className="text-base sm:text-lg"> {content}</Paragraph>
     </div>
   );
 }

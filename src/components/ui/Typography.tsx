@@ -1,11 +1,10 @@
-// src/components/ui/Typography.tsx
 import { cn } from '@/lib/utils';
 
 type HeadingProps = {
   level: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   children: React.ReactNode;
   className?: string;
-  gradient?: boolean; // Nova prop para gradiente
+  gradient?: boolean;
 };
 
 export function Heading({
@@ -17,12 +16,12 @@ export function Heading({
   const Tag = level;
 
   const sizes = {
-    h1: 'text-4xl md:text-5xl font-bold',
-    h2: 'text-3xl font-semibold',
-    h3: 'text-2xl font-semibold',
-    h4: 'text-xl font-medium',
-    h5: 'text-lg font-medium',
-    h6: 'text-base font-medium',
+    h1: 'text-3xl sm:text-4xl md:text-5xl font-bold', // Responsivo
+    h2: 'text-2xl sm:text-3xl font-semibold',
+    h3: 'text-xl sm:text-2xl font-semibold',
+    h4: 'text-lg sm:text-xl font-medium',
+    h5: 'text-base sm:text-lg font-medium',
+    h6: 'text-sm sm:text-base font-medium',
   };
 
   return (
@@ -54,6 +53,8 @@ export function Paragraph({
 }: ParagraphProps) {
   const color = variant === 'muted' ? 'text-muted' : 'text-body';
   return (
-    <p className={cn('font-body text-base', color, className)}>{children}</p>
+    <p className={cn('font-body text-base sm:text-lg', color, className)}>
+      {children}
+    </p>
   );
 }

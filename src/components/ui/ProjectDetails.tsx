@@ -4,51 +4,77 @@ import type { ProjectDetails } from '@/types/content';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { Container } from '@/components/ui/Container';
 import { Heading, Paragraph } from '@/components/ui/Typography';
+import { TechBadge } from '@/components/ui/TechBadge';
+import { ArrowUpRight } from 'lucide-react';
 
 type ProjectDetailsProps = {
   project: ProjectDetails;
 };
 
 export function ProjectDetails({ project }: ProjectDetailsProps) {
-  const { title, introduction, description, githubUrl, liveUrl, images } =
-    project;
+  const {
+    title,
+    introduction,
+    description,
+    githubUrl,
+    liveUrl,
+    images,
+    technologies,
+  } = project;
 
   return (
     <SectionContainer>
       <Container className="max-w-4xl">
         <div className="space-y-8">
-          {/* Título e Introdução */}
-          <div className="space-y-4">
-            <Heading level="h2" className="font-bold">
+          {/* Header Section */}
+          <div className="space-y-6">
+            <Heading level="h1" className="font-bold">
               {title}
             </Heading>
-            <Paragraph variant="muted">{introduction}</Paragraph>
+            <Paragraph variant="muted" className="text-lg">
+              {introduction}
+            </Paragraph>
+
+            <div className="flex flex-wrap gap-2">
+              {technologies.map((tech) => (
+                <TechBadge key={tech} tech={tech} />
+              ))}
+            </div>
           </div>
 
-          {/* <div className="flex flex-wrap gap-2"> */}
-          {/*   {technologies.map((tech) => ( */}
-          {/*     <span */}
-          {/*       key={tech} */}
-          {/*       className="px-2 py-1 text-sm bg-border border-border-hover border rounded-full dark:bg-surface-hover" */}
-          {/*     > */}
-          {/*       {tech} */}
-          {/*     </span> */}
-          {/*   ))} */}
-          {/* </div> */}
-
-          {/* Botões */}
-          <div className="flex gap-4">
-            {githubUrl && <Button>Source Code</Button>}
-            {liveUrl && <Button>Visit Website</Button>}
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            {githubUrl && (
+              <Button
+                variant="primary"
+                size="lg"
+                href={githubUrl}
+                external
+                rightIcon={<ArrowUpRight />}
+              >
+                View Source Code
+              </Button>
+            )}
+            {liveUrl && (
+              <Button
+                variant="primary"
+                size="lg"
+                href={liveUrl}
+                external
+                rightIcon={<ArrowUpRight />}
+              >
+                Visit Website
+              </Button>
+            )}
           </div>
 
-          {/* Imagens */}
+          {/* Project Images */}
           {images && images.length > 0 && (
             <div className="grid grid-cols-1 gap-6">
               {images.map((image) => (
                 <div
                   key={image.url}
-                  className="relative w-full h-[500px] rounded-lg overflow-hidden"
+                  className="relative aspect-video rounded-lg overflow-hidden border border-border"
                 >
                   <Image
                     src={image.url}
@@ -62,8 +88,10 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
             </div>
           )}
 
-          {/* Descrição */}
-          <Paragraph>{description}</Paragraph>
+          {/* Project Description */}
+          <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none">
+            {description}
+          </div>
         </div>
       </Container>
     </SectionContainer>

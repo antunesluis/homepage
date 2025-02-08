@@ -25,7 +25,8 @@ export function About({ data }: AboutProps) {
               {title}
             </Heading>
             <Paragraph variant="muted">{subtitle}</Paragraph>
-            <div className="absolute bottom-0 left-1/2 w-32 h-px bg-border -translate-x-1/2" />
+            {/* Linha separadora */}
+            <div className="absolute bottom-0 left-1/2 w-1/3 h-px bg-border -translate-x-1/2" />
           </div>
 
           {/* About Content Section */}
@@ -60,20 +61,18 @@ export function About({ data }: AboutProps) {
                 size="lg"
                 href="/docs/resume.pdf"
                 external
-                className="flex-1 sm:flex-none"
+                rightIcon={<ArrowDownToLine />}
               >
                 Download Resume
-                <ArrowDownToLine />
               </Button>
               <Button
                 variant="secondary"
                 size="lg"
                 href="https://github.com/antunesluis/portfolio"
                 external
-                className="flex-1 sm:flex-none"
+                rightIcon={<ArrowUpRight />}
               >
                 View Source Code
-                <ArrowUpRight />
               </Button>
             </div>
           </div>
