@@ -1,6 +1,3 @@
-import type { LucideProps } from 'lucide-react';
-import type { ReactElement } from 'react';
-
 export type URLString = `https://${string}` | `mailto:${string}`;
 export type DateString = `${number}-${number}-${number}`; // YYYY-MM-DD
 
@@ -17,15 +14,13 @@ export type Technology =
 export type SocialLink = {
   id: SocialPlatform;
   label: string;
-  href: `https://${string}` | `mailto:${string}`;
-  icon: (props: LucideProps) => ReactElement;
+  href: URLString;
 };
 
 export type ToolBoxElement = {
   id: Technology;
   label: string;
-  href: `https://${string}`;
-  icon: (props: LucideProps) => ReactElement;
+  href: URLString;
 };
 
 export type NavigationItem = {
@@ -52,14 +47,14 @@ export type ProjectCard = {
   introduction: string;
   technologies: Technology[];
   coverImage: ImageData;
-  date: `${number}-${number}-${number}`; // Formato: YYYY-MM-DD
+  date: DateString;
   slug: string;
 };
 
 export type ProjectDetails = {
   description: string;
-  githubUrl?: `https://${string}`;
-  liveUrl?: `https://${string}`;
+  githubUrl?: URLString;
+  liveUrl?: URLString;
   images?: ImageData[];
 } & ProjectCard;
 

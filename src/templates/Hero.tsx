@@ -1,3 +1,6 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { Container } from '@/components/ui/Container';
 import { SectionContainer } from '@/components/ui/SectionContainer';
 import { Avatar } from '@/components/ui/Avatar';
@@ -16,36 +19,43 @@ export function Hero({ data }: HeroProps) {
   return (
     <Base {...config}>
       <SectionContainer className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-        {/* Gradiente de fundo */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10" />
-
         <Container className="relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-[1fr,auto] gap-8 lg:gap-12 items-center">
-            {/* Conteúdo do Hero */}
-            <div className="space-y-6 md:space-y-8 text-center md:text-left">
+            {/* Hero Content */}
+            <motion.div
+              className="space-y-6 md:space-y-8 text-center md:text-left"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+            >
               <HeroContent
                 title={title}
                 subtitle={subtitle}
                 content={content}
               />
-
-              <div className="pt-4 flex justify-center md:justify-start w-full">
+              <motion.div
+                className="pt-4 flex justify-center md:justify-start w-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
                 <SocialLinks links={socialLinks} />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Avatar */}
-            <div className="flex justify-center md:justify-end order-first md:order-last">
-              {/* Efeito de gradiente */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/30 to-secondary/30 blur-2xl opacity-20 dark:opacity-40 rounded-full" />
-
-              {/* Avatar */}
+            <motion.div
+              className="flex justify-center md:justify-end order-first md:order-last"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
               <Avatar
                 src={avatarImage.url}
                 alt={avatarImage.alt}
                 className="relative w-48 h-48 md:w-64 md:h-64"
               />
-            </div>
+            </motion.div>
           </div>
         </Container>
       </SectionContainer>
