@@ -25,7 +25,7 @@ export function MobileNavLinks({ links, onClose }: MobileNavLinksProps) {
             className={cn(
               'px-4 py-2 rounded-lg transition-colors',
               'text-foreground hover:bg-surface-hover',
-              isActive && 'bg-surface-hover font-medium',
+              isActive ? 'bg-surface-hover font-medium' : '',
             )}
             onClick={onClose}
           >
