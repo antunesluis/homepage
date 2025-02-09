@@ -11,36 +11,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        heading: 'var(--color-text-heading)',
-        body: 'var(--color-text-body)',
-        muted: 'var(--color-text-muted)',
-        mutedElement: 'var(--color-muted)',
+        heading: 'rgb(var(--color-text-heading) / <alpha-value>)',
+        body: 'rgb(var(--color-text-body) / <alpha-value>)',
+        muted: 'rgb(var(--color-text-muted) / <alpha-value>)',
+        mutedElement: 'rgb(var(--color-muted) / <alpha-value>)',
 
         primary: {
-          DEFAULT: 'var(--color-primary)',
-          hover: 'var(--color-primary-hover)',
-          muted: 'var(--color-primary-muted)',
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          hover: 'rgb(var(--color-primary-hover) / <alpha-value>)',
+          muted: 'rgb(var(--color-primary-muted) / <alpha-value>)',
         },
         secondary: {
-          DEFAULT: 'var(--color-secondary)',
-          hover: 'var(--color-secondary-hover)',
-          muted: 'var(--color-secondary-muted)',
+          DEFAULT: 'rgb(var(--color-secondary) / <alpha-value>)',
+          hover: 'rgb(var(--color-secondary-hover) / <alpha-value>)',
+          muted: 'rgb(var(--color-secondary-muted) / <alpha-value>)',
         },
         accent: {
-          DEFAULT: 'var(--color-accent)',
-          hover: 'var(--color-accent-hover)',
-          muted: 'var(--color-accent-muted)',
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          hover: 'rgb(var(--color-accent-hover) / <alpha-value>)',
+          muted: 'rgb(var(--color-accent-muted) / <alpha-value>)',
         },
 
-        background: 'var(--color-background)',
-        foreground: 'var(--color-foreground)',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
         border: {
-          DEFAULT: 'var(--color-border)',
-          hover: 'var(--color-border-hover)',
+          DEFAULT: 'rgb(var(--color-border) / <alpha-value>)',
+          hover: 'rgb(var(--color-border-hover) / <alpha-value>)',
         },
         surface: {
-          DEFAULT: 'var(--color-surface)',
-          hover: 'var(--color-surface-hover)',
+          DEFAULT: 'rgb(var(--color-surface) / <alpha-value>)',
+          hover: 'rgb(var(--color-surface-hover) / <alpha-value>)',
         },
       },
       fontFamily: {
