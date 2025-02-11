@@ -9,17 +9,19 @@ type ImageProps = {
   lazy?: boolean;
 } & React.ComponentProps<typeof NextImage>;
 
-export function BlurImage(props: ImageProps) {
+const BlurImage = (props: ImageProps) => {
   const { alt, src, className, imageClassName, lazy = true, ...rest } = props;
   const [isLoading, setIsLoading] = useState(true);
 
-  const loadingAnimate = isLoading ? 'animate-pulse' : '';
-  const loadingScale = isLoading ? 'scale-[1.02]' : '';
-
   return (
-    <div className={cn('overflow-hidden', loadingAnimate, className)}>
+    <div
+      className={cn('overflow-hidden', isLoading && 'animate-pulse', className)}
+    >
       <NextImage
-        className={cn(loadingScale, imageClassName)}
+        className={cn(
+          isLoading && 'scale-[1.02] blur-xl grayscale',
+          imageClassName,
+        )}
         style={{
           transition: 'filter 700ms ease, scale 150ms ease',
         }}
@@ -35,4 +37,6 @@ export function BlurImage(props: ImageProps) {
       />
     </div>
   );
-}
+};
+
+export { BlurImage };
