@@ -1,84 +1,74 @@
-import { SectionContainer } from '@/components/shared/SectionContainer';
-import { AboutSection } from '@/types/content';
-import { Base } from '@/templates/Base';
+import { ArrowUpRight, ArrowDownToLine } from 'lucide-react';
 import { Paragraph, Heading } from '@/components/ui/Typography';
-import { Container } from '@/components/shared/Container';
-import { Toolbox } from '@/components/layout/Toolbox';
 import { SocialLinks } from '@/components/ui/navigation/SociaLinks';
 import { Button } from '@/components/ui/Button';
-import { ArrowUpRight, ArrowDownToLine } from 'lucide-react';
+import { Container } from '@/components/shared/Container';
+import { SectionContainer } from '@/components/shared/SectionContainer';
+import { SectionHeader } from '@/components/layout/SectionHeader';
+import { Toolbox } from '@/components/layout/Toolbox';
+import { AboutSection } from '@/types/content';
 
 export type AboutProps = {
   data: AboutSection;
 };
 
 export function About({ data }: AboutProps) {
-  const { title, subtitle, whoIAm, config, toolbox, socialLinks } = data;
+  const { title, subtitle, whoIAm, toolbox, socialLinks } = data;
 
   return (
-    <Base {...config}>
-      <SectionContainer>
-        <Container>
-          {/* Header Section */}
-          <div className="relative pb-8 mb-16 text-center">
-            <Heading level="h1" className="mb-3">
-              {title}
+    <SectionContainer>
+      <Container>
+        <SectionHeader title={title} subtitle={subtitle} />
+
+        {/* About Content Section */}
+        <div className="space-y-16">
+          {/* Who I Am Section */}
+          <div>
+            <Heading level="h2" className="mb-6">
+              {whoIAm.title}
             </Heading>
-            <Paragraph variant="muted">{subtitle}</Paragraph>
-            {/* Linha separadora */}
-            <div className="absolute bottom-0 left-1/2 w-1/3 h-px bg-border -translate-x-1/2" />
+            <Paragraph className="leading-relaxed">
+              {whoIAm.apresentation}
+            </Paragraph>
           </div>
 
-          {/* About Content Section */}
-          <div className="space-y-16">
-            {/* Who I Am Section */}
-            <div>
-              <Heading level="h2" className="mb-6">
-                {whoIAm.title}
-              </Heading>
-              <Paragraph className="leading-relaxed">
-                {whoIAm.apresentation}
-              </Paragraph>
-            </div>
-
-            {/* Toolbox Section */}
-            <div>
-              <Toolbox data={toolbox} />
-            </div>
-
-            {/* On the web Section */}
-            <div>
-              <Heading level="h2" className="mb-6">
-                {'On the web'}
-              </Heading>
-              <SocialLinks links={socialLinks} showText />
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="secondary"
-                size="lg"
-                href="/docs/resume.pdf"
-                external
-                rightIcon={<ArrowDownToLine />}
-              >
-                Download Resume
-              </Button>
-              <Button
-                variant="secondary"
-                size="lg"
-                href="https://github.com/antunesluis/portfolio"
-                external
-                rightIcon={<ArrowUpRight />}
-              >
-                View Source Code
-              </Button>
-            </div>
+          {/* Toolbox Section */}
+          <div>
+            <Toolbox data={toolbox} />
           </div>
-        </Container>
-      </SectionContainer>
-    </Base>
+
+          {/* On the web Section */}
+          <div>
+            <Heading level="h2" className="mb-6">
+              {'On the web'}
+            </Heading>
+            <SocialLinks links={socialLinks} showText />
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              variant="secondary"
+              size="lg"
+              href="/docs/resume.pdf"
+              external
+              rightIcon={<ArrowDownToLine />}
+            >
+              Download Resume
+            </Button>
+            <Button
+              variant="secondary"
+              size="lg"
+              href="https://github.com/antunesluis/portfolio"
+              external
+              rightIcon={<ArrowUpRight />}
+            >
+              View Source Code
+            </Button>
+          </div>
+        </div>
+      </Container>
+    </SectionContainer>
   );
 }
 

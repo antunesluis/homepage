@@ -59,7 +59,6 @@ export type ProjectDetails = {
 } & ProjectCard;
 
 export type ProjectSection = {
-  config: PageConfig;
   title: string;
   subtitle: string;
   projects: ProjectDetails[];
@@ -72,7 +71,6 @@ export type HeroSection = {
   resumeUrl: string;
   avatarImage: ImageData;
   socialLinks: SocialLink[];
-  config: PageConfig;
 };
 
 export type TimeLine = {
@@ -102,5 +100,4 @@ export type AboutSection = {
   toolbox: ToolBox;
   timeline: TimeLine;
   socialLinks: SocialLink[];
-  config: PageConfig;
 };

@@ -46,7 +46,6 @@ export function SocialLinks({ links, showText = false }: SocialLinksProps) {
               <div
                 className={cn(
                   'absolute -inset-2 rounded-full opacity-0 transition-opacity',
-                  'group-hover:opacity-100 bg-primary/10',
                 )}
               />
               <Icon

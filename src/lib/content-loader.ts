@@ -49,21 +49,18 @@ export function getHeroContent(): HeroSection {
   return {
     ...SectionsContent.hero,
     socialLinks: getSocialLinks(),
-    config: getPageConfig(),
   } as HeroSection;
 }
 
 export function getProjects(): ProjectSection {
   return {
     ...SectionsContent.projects,
-    config: getPageConfig(),
   } as ProjectSection;
 }
 
 export function getAboutSection(): AboutSection {
   return {
     ...SectionsContent.about,
-    config: getPageConfig(),
     socialLinks: getSocialLinks(),
     toolbox: getToolbox(),
   } as AboutSection;

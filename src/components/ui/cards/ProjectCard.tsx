@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import type { ProjectCard } from '@/types/content';
 import { Heading, Paragraph } from '@/components/ui/Typography';
 import { TechBadge } from '@/components/ui/TechBadge';
+import { BlurImage } from '@/components/ui/BlurImage';
 
 type ProjectCardProps = {
   project: ProjectCard;
@@ -15,12 +15,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <Link href={`/projects/${slug}`}>
       <div className="group relative bg-white dark:bg-surface rounded-xl border border-border overflow-hidden transition-all hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-1">
         <div className="relative h-60">
-          <Image
+          <BlurImage
             src={coverImage.url}
             alt={coverImage.alt}
             fill
-            className="object-cover"
+            className="rounded-xl"
+            imageClassName="object-cover group-hover:scale-105 transition-transform duration-100"
             sizes="(max-width: 768px) 100vw, 50vw"
+            quality={100}
           />
         </div>
 

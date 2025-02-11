@@ -14,13 +14,14 @@ export const FadeIn = ({
   children,
   className,
   delay = 0,
-  duration = 0.8,
+  duration = 0.5,
 }: BaseAnimationProps) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
-    transition={{ delay, duration, ease: 'easeOut' }}
+    transition={{ delay, duration, ease: 'easeInOut' }}
     className={cn(className)}
+    style={{ willChange: 'opacity, transform' }}
   >
     {children}
   </motion.div>
