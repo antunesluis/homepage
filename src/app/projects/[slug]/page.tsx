@@ -13,7 +13,7 @@ export default async function Page({ params }: DynamicPageParams) {
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
-    return notFound(); // Retorna um 404 se o projeto não for encontrado
+    return notFound();
   }
 
   return <ProjectDetails project={project} />;
