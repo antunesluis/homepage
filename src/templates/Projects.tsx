@@ -1,6 +1,6 @@
-import { ProjectsGrid } from '@/components/layout/ProjectsGrid';
-import { Container } from '@/components/ui/Container';
-import { SectionContainer } from '@/components/ui/SectionContainer';
+import { ProjectsGrid } from '@/components/layout/ProjectGrid';
+import { Container } from '@/components/shared/Container';
+import { SectionContainer } from '@/components/shared/SectionContainer';
 import { ProjectSection } from '@/types/content';
 import { Heading, Paragraph } from '@/components/ui/Typography';
 import { Base } from '@/templates/Base';

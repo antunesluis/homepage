@@ -126,23 +126,6 @@
           "href": "https://neovim.io/"
         }
       ]
-    },
-    "timeline": {
-      "title": "Bio",
-      "events": [
-        {
-          "date": "2004",
-          "text": "Palmeira das Missões, RS"
-        },
-        {
-          "date": "2020",
-          "text": "Ensino Médio"
-        },
-        {
-          "date": "2023",
-          "text": "Ciência da Computação | UFSM"
-        }
-      ]
     }
   }
 }

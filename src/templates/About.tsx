@@ -1,10 +1,10 @@
-import { SectionContainer } from '@/components/ui/SectionContainer';
+import { SectionContainer } from '@/components/shared/SectionContainer';
 import { AboutSection } from '@/types/content';
 import { Base } from '@/templates/Base';
 import { Paragraph, Heading } from '@/components/ui/Typography';
-import { Container } from '@/components/ui/Container';
+import { Container } from '@/components/shared/Container';
 import { Toolbox } from '@/components/layout/Toolbox';
-import { SocialLinks } from '@/components/ui/SocialLinks';
+import { SocialLinks } from '@/components/ui/navigation/SociaLinks';
 import { Button } from '@/components/ui/Button';
 import { ArrowUpRight, ArrowDownToLine } from 'lucide-react';
 

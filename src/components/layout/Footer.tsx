@@ -1,4 +1,4 @@
-import { Container } from '@/components/ui/Container';
+import { Container } from '@/components/shared/Container';
 import { Paragraph } from '@/components/ui/Typography';
 
 export type FooterProps = {

@@ -1,5 +1,5 @@
 import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/ui/Footer';
+import { Footer } from '@/components/layout/Footer';
 import type { PageConfig } from '@/types/content';
 
 type BaseProps = {

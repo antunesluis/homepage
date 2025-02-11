@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { NavLinks } from './NavLinks';
+import { NavLinks } from '../ui/navigation/NavLinks';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
 import { NavigationItem } from '@/types/content';
-import { MobileMenuToggle } from './MobileMenuToggle';
-import { MobileMenu } from './MobileMenu';
+import { MobileMenuToggle } from '../ui/navigation/MobileMenuToggle';
+import { MobileMenu } from '../ui/navigation/MobileMenu';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import type { ProjectDetails } from '@/types/content';
-import { SectionContainer } from '@/components/ui/SectionContainer';
-import { Container } from '@/components/ui/Container';
+import { SectionContainer } from '@/components/shared/SectionContainer';
+import { Container } from '@/components/shared/Container';
 import { Heading, Paragraph } from '@/components/ui/Typography';
 import { TechBadge } from '@/components/ui/TechBadge';
 import { ArrowUpRight } from 'lucide-react';

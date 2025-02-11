@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getProjects, getPageConfig } from '@/lib/content-loader';
-import { ProjectDetails } from '@/components/ui/ProjectDetails';
+import { ProjectDetails } from '@/components/layout/ProjectDetails';
 import { Base } from '@/templates/Base';
 
 type DynamicPageParams = {

@@ -1,4 +1,4 @@
-import { ProjectCard } from '@/components/ui/ProjectCard';
+import { ProjectCard } from '@/components/ui/cards/ProjectCard';
 import type { ProjectDetails } from '@/types/content';
 
 type ProjectsGridProps = {
