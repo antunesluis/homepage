@@ -4,7 +4,7 @@ Welcome to my homepage! This project showcases my skills, projects, and
 experience as a developer. Built with modern technologies and optimized for
 performance, it reflects my passion for clean design and efficient code.
 
-![Portfolio Screenshot](public/screenshot.png)
+![Portfolio Screenshot](public/images/screenshot.png)
 
 ## Technologies Used
 
