@@ -2,14 +2,22 @@ import { notFound } from 'next/navigation';
 import { getProjects } from '@/lib/data-loader';
 import { ProjectDetails } from '@/components/layout/ProjectDetails';
 
-type DynamicPageParams = {
+type PageParams = {
   params: Promise<{ slug: string }>;
 };
 
-export default async function Page({ params }: DynamicPageParams) {
+export async function generateStaticParams() {
+  const { projects } = getProjects();
+
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export default async function Page({ params }: PageParams) {
+  const { projects } = getProjects();
   const slug = (await params).slug;
 
-  const { projects } = getProjects();
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
