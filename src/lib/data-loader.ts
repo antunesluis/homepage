@@ -12,6 +12,9 @@ import {
   Technology,
   ToolBoxElement,
   ToolBox,
+  UsesSection,
+  UsesCategory,
+  UsesItem,
 } from '@/types/content';
 
 export function getSocialLinks(): SocialLink[] {
@@ -64,4 +67,32 @@ export function getAboutSection(): AboutSection {
     socialLinks: getSocialLinks(),
     toolbox: getToolbox(),
   } as AboutSection;
+}
+
+function processUsesItems(items: UsesItem[]): UsesItem[] {
+  return items.map((item) => ({
+    iconUrl: item.iconUrl,
+    title: item.title,
+    subtitle: item.subtitle,
+    href: item.href,
+    description: item.description,
+  }));
+}
+
+function processUsesCategories(categories: UsesCategory[]): UsesCategory[] {
+  return categories.map((category) => ({
+    title: category.title,
+    description: category.description,
+    items: processUsesItems(category.items),
+  }));
+}
+
+export function getUsesSection(): UsesSection {
+  const usesData = SectionsContent.uses;
+
+  return {
+    title: usesData.title,
+    subtitle: usesData.subtitle,
+    categories: processUsesCategories(usesData.categories),
+  };
 }

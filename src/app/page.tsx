@@ -1,4 +1,4 @@
-import { getHeroContent } from '@/lib/content-loader';
+import { getHeroContent } from '@/lib/data-loader';
 import { Hero } from '@/templates/Hero';
 
 export default function Home() {

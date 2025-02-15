@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { NavigationItem } from '@/types/content';
 
@@ -11,38 +10,37 @@ export type NavLinksProps = {
 };
 
 export function NavLinks({ links = [] }: NavLinksProps) {
-  const pathname = usePathname();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <nav className="hidden md:flex items-center gap-6">
+    <nav className="hidden md:flex items-center gap-3">
       {links.map((item, index) => {
-        const isActive = pathname === item.href;
-
         return (
           <Link
             key={item.href}
             href={item.href}
             className={cn(
-              'relative inline-flex flex-col items-center px-2 py-2',
-              'text-md transition-colors duration-200',
-              'hover:text-foreground/80',
-              isActive ? 'text-foreground font-medium' : 'text-foreground/60',
+              'relative inline-flex items-center px-3 py-2',
+              'text-md font-medium font-heading',
+              'transition-colors duration-200 ease-in-out',
+              hoveredIndex === index
+                ? 'text-primary'
+                : 'text-foreground/70 hover:text-foreground/90',
             )}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             <span className="relative">
               {item.label}
-              {/* Linha inferior */}
               <span
                 className={cn(
-                  'absolute -bottom-1 left-0 w-full h-[2px] bg-primary',
-                  ' transform scale-x-0 transition-all duration-200',
+                  'absolute -bottom-0.5 left-0 h-[2px] w-full',
+                  'bg-gradient-to-r from-secondary/80 to-secondary/60',
+                  'transform origin-left transition-all duration-200 ease-out',
                   hoveredIndex === index ? 'scale-x-100' : 'scale-x-0',
                 )}
                 style={{
-                  transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
+                  transformOrigin: 'left center',
                 }}
               />
             </span>

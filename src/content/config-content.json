@@ -3,7 +3,8 @@
   "logoText": "Luis Antunes",
   "navigationLinks": [
     { "label": "Home", "href": "/" },
-    { "label": "Projetos", "href": "/projects" },
-    { "label": "Sobre", "href": "/about" }
+    { "label": "Projects", "href": "/projects" },
+    { "label": "Uses", "href": "/uses" },
+    { "label": "About", "href": "/about" }
   ]
 }

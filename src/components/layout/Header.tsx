@@ -48,7 +48,7 @@ export function Header({ links, logoText }: HeaderProps) {
         <div
           className={cn(
             'h-[60px] rounded-2xl px-8',
-            'bg-background/30 shadow-sm',
+            'bg-background/90 shadow-sm',
             'saturate-100 backdrop-blur-[10px]',
             'border border-border/40',
             'transition-colors duration-200',
@@ -56,19 +56,9 @@ export function Header({ links, logoText }: HeaderProps) {
           )}
         >
           <div className="h-full flex items-center justify-between">
-            {/* Skip Nav Link - Escondido por padrão, visível apenas com foco */}
-            <a
-              href="#skip-nav"
-              className="bg-background rounded-lg border border-border focus:ring-2 focus:ring-primary/50
-                       fixed left-4 top-4 -translate-y-20 p-2 font-medium
-                       transition-transform focus:translate-y-0"
-            >
-              <span>Pular para o conteúdo principal</span>
-            </a>
-
             <Link
               href="/"
-              className="relative text-foreground hover:text-foreground/80 transition-colors duration-200 text-xl font-semibold"
+              className="relative text-foreground hover:text-foreground/80 transition-colors duration-200 text-xl font-heading font-semibold"
             >
               {logoText}
             </Link>
@@ -91,8 +81,8 @@ export function Header({ links, logoText }: HeaderProps) {
         </div>
       </motion.header>
 
-      {/* Espaçador para compensar o header fixed */}
-      <div className="h-24" />
+      {/* Espaçador para compensar o header fixed, contem o tamanho da header */}
+      <div className="h-16" />
 
       {/* Mobile Menu */}
       <MobileMenu

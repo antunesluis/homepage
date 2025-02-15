@@ -20,7 +20,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             alt={coverImage.alt}
             fill
             className="rounded-xl"
-            imageClassName="object-cover group-hover:scale-105 transition-transform duration-100"
+            imageClassName="object-cover transition-transform duration-100"
             sizes="(max-width: 768px) 100vw, 50vw"
             quality={100}
           />

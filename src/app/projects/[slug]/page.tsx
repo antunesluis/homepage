@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getProjects } from '@/lib/content-loader';
+import { getProjects } from '@/lib/data-loader';
 import { ProjectDetails } from '@/components/layout/ProjectDetails';
 
 type DynamicPageParams = {

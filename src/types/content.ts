@@ -1,7 +1,7 @@
 export type URLString = `https://${string}` | `mailto:${string}`;
 export type DateString = `${number}-${number}-${number}`; // YYYY-MM-DD
 
-export type SocialPlatform = 'github' | 'linkedin' | 'email';
+export type SocialPlatform = 'github' | 'linkedin' | 'email' | 'instagram';
 
 export type Technology =
   | 'typescript'
@@ -9,7 +9,15 @@ export type Technology =
   | 'node'
   | 'javascript'
   | 'next'
-  | 'neovim';
+  | 'neovim'
+  | 'html'
+  | 'css'
+  | 'python'
+  | 'postgresql'
+  | 'linux'
+  | 'java'
+  | 'golang'
+  | 'cpp';
 
 export type SocialLink = {
   id: SocialPlatform;
@@ -95,9 +103,28 @@ export type WhoIAm = {
 export type AboutSection = {
   title: string;
   subtitle: string;
-  avatarImage: ImageData;
   whoIAm: WhoIAm;
   toolbox: ToolBox;
   timeline: TimeLine;
   socialLinks: SocialLink[];
+};
+
+export type UsesItem = {
+  iconUrl: string;
+  title: string;
+  subtitle: string;
+  href?: string;
+  description?: string;
+};
+
+export type UsesCategory = {
+  title: string;
+  description?: string;
+  items: UsesItem[];
+};
+
+export type UsesSection = {
+  title: string;
+  subtitle: string;
+  categories: UsesCategory[];
 };

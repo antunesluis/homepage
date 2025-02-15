@@ -1,6 +1,11 @@
 'use client';
 
-import { EmailIcon, GithubIcon, LinkedinIcon } from '@/config/icons';
+import {
+  EmailIcon,
+  GithubIcon,
+  InstagramIcon,
+  LinkedinIcon,
+} from '@/config/icons';
 import type { SocialPlatform, SocialLink } from '@/types/content';
 import { cn } from '@/lib/utils';
 
@@ -12,6 +17,8 @@ const getIconComponent = (id: SocialPlatform) => {
       return LinkedinIcon;
     case 'email':
       return EmailIcon;
+    case 'instagram':
+      return InstagramIcon;
     default:
       throw new Error(`Icon not found for: ${id}`);
   }
@@ -59,7 +66,7 @@ export function SocialLinks({ links, showText = false }: SocialLinksProps) {
 
             {/* Text (when enabled) */}
             {showText && (
-              <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+              <span className="text-sm font-body text-muted-foreground group-hover:text-foreground transition-colors">
                 {link.label}
               </span>
             )}

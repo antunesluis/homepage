@@ -1,4 +1,4 @@
-import { getAboutSection } from '@/lib/content-loader';
+import { getAboutSection } from '@/lib/data-loader';
 import { About } from '@/templates/About';
 
 export default function Home() {

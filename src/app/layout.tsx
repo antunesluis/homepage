@@ -1,11 +1,10 @@
-// src/app/layout.tsx
 import '@/styles/globals.css';
 import { inter, poppins, robotoMono } from '@/lib/fonts';
 import { ThemeProvider } from 'next-themes';
 import { AnimatePresence } from 'framer-motion';
-import { Header } from '@/components/layout/Header'; // Importe o Header
-import { Footer } from '@/components/layout/Footer'; // Importe o Footer (se necessário)
-import { getPageConfig } from '@/lib/content-loader'; // Função para carregar o PageConfig
+import { Header } from '@/components/layout/Header';
+import { Footer } from '@/components/layout/Footer';
+import { getPageConfig } from '@/lib/data-loader';
 
 export default function RootLayout({
   children,

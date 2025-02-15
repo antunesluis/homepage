@@ -3,7 +3,22 @@
 import { useState } from 'react';
 import { Heading, Paragraph } from '@/components/ui/Typography';
 import type { ToolBox, Technology } from '@/types/content';
-import { NodeIcon, TypescriptIcon } from '@/config/icons';
+import {
+  JavaIcon,
+  NodeIcon,
+  TypescriptIcon,
+  GolangIcon,
+  ReactIcon,
+  HtmlIcon,
+  CssIcon,
+  PythonIcon,
+  PostgresIcon,
+  LinuxIcon,
+  JavascriptIcon,
+  NextIcon,
+  NeovimIcon,
+  CppIcon,
+} from '@/config/icons';
 import { cn } from '@/lib/utils';
 
 const getTechIcon = (id: Technology) => {
@@ -12,6 +27,30 @@ const getTechIcon = (id: Technology) => {
       return TypescriptIcon;
     case 'node':
       return NodeIcon;
+    case 'java':
+      return JavaIcon;
+    case 'golang':
+      return GolangIcon;
+    case 'react':
+      return ReactIcon;
+    case 'html':
+      return HtmlIcon;
+    case 'css':
+      return CssIcon;
+    case 'python':
+      return PythonIcon;
+    case 'postgresql':
+      return PostgresIcon;
+    case 'linux':
+      return LinuxIcon;
+    case 'javascript':
+      return JavascriptIcon;
+    case 'next':
+      return NextIcon;
+    case 'neovim':
+      return NeovimIcon;
+    case 'cpp':
+      return CppIcon;
     default:
       throw new Error(`Icon not found for: ${id}`);
   }
@@ -25,25 +64,27 @@ export function Toolbox({ data }: ToolBoxProps) {
   const [activeTech, setActiveTech] = useState<string | null>(null);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       <Heading level="h2">{data.title}</Heading>
       <Paragraph variant="muted">{data.description}</Paragraph>
 
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
         {data.technologies.map((tech) => {
           const Icon = getTechIcon(tech.id);
 
           return (
             <div
               key={tech.id}
-              className="relative group flex items-center justify-center p-4 sm:p-6 md:p-8 rounded-xl bg-surface border border-border dark:bg-surface hover:bg-surface-hover transition-colors cursor-pointer"
+              className="relative group flex flex-col items-center justify-center p-6 rounded-xl bg-surface border border-border hover:bg-surface-hover transition-colors cursor-pointer"
               onClick={() =>
                 setActiveTech(activeTech === tech.id ? null : tech.id)
               }
               onBlur={() => setActiveTech(null)}
             >
-              {/* Ícon */}
-              <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary transition-opacity duration-200" />
+              {/* Ícone */}
+              <div className="w-16 h-16 flex items-center justify-center">
+                <Icon className="w-full h-full text-primary" />
+              </div>
 
               {/* Label */}
               <span

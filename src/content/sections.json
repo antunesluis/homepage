@@ -2,7 +2,7 @@
   "hero": {
     "title": "Hey, I'm Luis Antunes!",
     "subtitle": "Full Stack Developer",
-    "content": "Olá! Sou um estudante apaixonado por tecnologia, cursando o 4º semestre de Ciência da Computação na Universidade Federal de Santa Maria.",
+    "content": "Hi! I'm a passionate tech enthusiast and Computer Science student in my 4th semester at the Federal University of Santa Maria (UFSM), Brazil. I love building web applications and exploring new technologies to create impactful solutions.",
     "resumeUrl": "https://example.com/resume.pdf",
     "avatarImage": {
       "url": "/images/avatar2.png",
@@ -10,122 +10,164 @@
     }
   },
   "projects": {
-    "title": "Projetos",
-    "subtitle": "Confira alguns dos meus projetos mais recentes",
+    "title": "Projects",
+    "subtitle": "Explore some of my recent projects",
     "projects": [
       {
-        "title": "Meu Projeto",
-        "introduction": "Introdução do projeto",
-        "description": "Descrição detalhada do projeto",
-        "technologies": ["React", "Node.js"],
+        "title": "Modular Landing Pages",
+        "introduction": "A modular system for creating dynamic landing pages",
+        "description": "Modular Landing Pages is a project designed to simplify the creation of customizable landing pages. Built with React and Strapi, it offers a modular approach that allows users to manage content dynamically through Strapi's CMS. The system ensures flexibility and scalability, making it easy to create and update landing pages with reusable components.",
+        "technologies": [
+          "React",
+          "Vitest",
+          "Typescript",
+          "Styled Components",
+          "Storybook",
+          "Strapi"
+        ],
         "coverImage": {
-          "url": "/images/cover.png",
-          "alt": "Imagem do projeto"
+          "url": "/images/coverlp.png",
+          "alt": "Modular Landing Pages project cover"
         },
         "date": "2023-08-01",
-        "slug": "meu-projeto",
-        "githubUrl": "https://github.com/seuuser/meu-projeto",
-        "liveUrl": "https://meuprojeto.com",
+        "slug": "modular-landing-pages",
+        "githubUrl": "https://github.com/antunesluis/modular-landing-pages",
+        "liveUrl": "https://modularlandingpages.vercel.app/",
         "images": [
           {
-            "url": "/images/cover.png",
-            "alt": "Imagem 1 do projeto"
+            "url": "/images/lp1.png",
+            "alt": "Modular Landing Pages screenshot 1"
+          },
+          {
+            "url": "/images/lp2.png",
+            "alt": "Modular Landing Pages screenshot 2"
           }
         ]
       },
       {
-        "title": "Meu Projeto 2",
-        "introduction": "Introdução do projeto",
-        "description": "Descrição detalhada do projeto",
-        "technologies": ["React", "Node.js"],
+        "title": "Student Enrollment Portal",
+        "introduction": "A comprehensive student management system",
+        "description": "The Student Enrollment Portal is a robust API built with Node.js and Express.js, designed to manage student data efficiently. It features full CRUD operations, user authentication with JWT, profile photo uploads, and input validation. The backend uses MariaDB with Sequelize ORM for data persistence, and bcryptjs for secure password hashing. The API includes endpoints for student management, user administration, photo uploads, and authentication.",
+        "technologies": [
+          "Javascript",
+          "Node.js",
+          "MariaDB",
+          "ExpressJS",
+          "Jest"
+        ],
         "coverImage": {
-          "url": "/images/cover.png",
-          "alt": "Imagem do projeto"
+          "url": "/images/node.png",
+          "alt": "Student Enrollment Portal project cover"
         },
         "date": "2023-08-01",
-        "slug": "meu-projeto-2",
-        "githubUrl": "https://github.com/seuuser/meu-projeto",
-        "liveUrl": "https://meuprojeto.com",
-        "images": [
-          {
-            "url": "/images/cover.png",
-            "alt": "Imagem 1 do projeto"
-          }
-        ]
-      },
-      {
-        "title": "Meu Projeto 3",
-        "introduction": "Introdução do projeto",
-        "description": "Descrição detalhada do projeto",
-        "technologies": ["React", "Node.js"],
-        "coverImage": {
-          "url": "/images/cover.png",
-          "alt": "Imagem do projeto"
-        },
-        "date": "2023-08-01",
-        "slug": "meu-projeto-3",
-        "githubUrl": "https://github.com/seuuser/meu-projeto",
-        "liveUrl": "https://meuprojeto.com",
-        "images": [
-          {
-            "url": "/images/cover.png",
-            "alt": "Imagem 1 do projeto"
-          }
-        ]
-      },
-      {
-        "title": "Meu Projeto 4",
-        "introduction": "Introdução do projeto",
-        "description": "Descrição detalhada do projeto",
-        "technologies": ["React", "Node.js"],
-        "coverImage": {
-          "url": "/images/cover.png",
-          "alt": "Imagem do projeto"
-        },
-        "date": "2023-08-01",
-        "slug": "meu-projeto-4",
-        "githubUrl": "https://github.com/seuuser/meu-projeto",
-        "liveUrl": "https://meuprojeto.com",
-        "images": [
-          {
-            "url": "/images/cover.png",
-            "alt": "Imagem 1 do projeto"
-          }
-        ]
+        "slug": "student-enrollment-portal",
+        "githubUrl": "https://github.com/antunesluis/student-enroll-portal"
       }
     ]
   },
   "about": {
-    "title": "About",
-    "subtitle": "I am Luis Antunes, a student who loves web development",
-    "avatarImage": {
-      "url": "/images/avatar.jpg",
-      "alt": "Luis Antunes Avatar"
-    },
+    "title": "About Me",
+    "subtitle": "I'm Luis Antunes, a student passionate about web development",
     "whoIAm": {
       "title": "Who I Am",
-      "apresentation": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "apresentation": "I'm currently a Computer Science student at the Federal University of Santa Maria (UFSM), located in Santa Maria, Brazil. I'm 20 years old and started programming at the end of high school in 2022. Since entering university, I've been intensively developing my skills and discovered web development, which has become one of my main focuses of study. I love building websites, developing APIs, and learning more about interfaces and UI/UX design. I'm also passionate about improving my knowledge of computer science, studying operating systems, and diving into data structures and algorithms (DSA)."
     },
     "toolbox": {
       "title": "My Toolbox",
-      "description": "Aqui estão as principais tecnologias que utilizo no meu dia a dia:",
-      "technologies": [
-        {
-          "id": "typescript",
-          "label": "typescript",
-          "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
-        },
-        {
-          "id": "next",
-          "label": "Next.js",
-          "href": "https://nextjs.org/"
-        },
-        {
-          "id": "neovim",
-          "label": "Neovim",
-          "href": "https://neovim.io/"
-        }
-      ]
+      "description": "Here are the technologies I've worked with and explored:"
     }
+  },
+  "uses": {
+    "title": "My Development Setup",
+    "subtitle": "A complete overview of my daily development tools and workspace configuration",
+    "categories": [
+      {
+        "title": "Coding",
+        "items": [
+          {
+            "iconUrl": "/images/icons/neovim2.svg",
+            "title": "NeoVim",
+            "subtitle": "Primary Code Editor",
+            "href": "https://neovim.io/"
+          },
+          {
+            "iconUrl": "/images/icons/vscode.png",
+            "title": "VS Code",
+            "subtitle": "Secondary Code Editor",
+            "href": "https://code.visualstudio.com/"
+          },
+          {
+            "iconUrl": "/images/icons/intellij.png",
+            "title": "IntelliJ IDEA",
+            "subtitle": "Java IDE",
+            "href": "https://www.jetbrains.com/idea/"
+          },
+          {
+            "iconUrl": "/images/icons/kanagawa.png",
+            "title": "Kanagawa Theme",
+            "subtitle": "Coding Theme",
+            "href": "https://github.com/rebelot/kanagawa.nvim"
+          },
+          {
+            "iconUrl": "/images/icons/alacritty.png",
+            "title": "Alacritty",
+            "subtitle": "Terminal Emulator",
+            "href": "https://alacritty.org/"
+          },
+          {
+            "iconUrl": "/images/icons/postman.png",
+            "title": "Postman",
+            "subtitle": "API Development Platform",
+            "href": "https://www.postman.com/"
+          },
+          {
+            "iconUrl": "/images/icons/docker.png",
+            "title": "Docker",
+            "subtitle": "Containerization Tool",
+            "href": "https://www.docker.com/"
+          }
+        ]
+      },
+      {
+        "title": "Linux Environment",
+        "items": [
+          {
+            "iconUrl": "/images/icons/arch.png",
+            "title": "Arch Linux",
+            "subtitle": "Linux Distribution",
+            "href": "https://archlinux.org/"
+          },
+          {
+            "iconUrl": "/images/icons/hyprland.svg",
+            "title": "Hyprland",
+            "subtitle": "Tiling Window Manager",
+            "href": "https://hyprland.org/"
+          }
+        ]
+      },
+      {
+        "title": "Software Tools",
+        "items": [
+          {
+            "iconUrl": "/images/icons/obsidian.png",
+            "title": "Obsidian",
+            "subtitle": "Markdown Notes",
+            "href": "https://obsidian.md/"
+          },
+          {
+            "iconUrl": "/images/icons/chrome.png",
+            "title": "Google Chrome",
+            "subtitle": "Development Browser",
+            "href": "https://www.google.com/chrome/"
+          },
+          {
+            "iconUrl": "/images/icons/firefox.png",
+            "title": "Firefox",
+            "subtitle": "Personal Browser",
+            "href": "https://www.mozilla.org/firefox/"
+          }
+        ]
+      }
+    ]
   }
 }

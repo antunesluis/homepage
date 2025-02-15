@@ -3,37 +3,85 @@
     {
       "id": "github",
       "label": "GitHub",
-      "href": "https://github.com/seuuser",
+      "href": "https://github.com/antunesluis",
       "showText": true
     },
     {
       "id": "linkedin",
       "label": "LinkedIn",
-      "href": "https://linkedin.com/in/seuuser",
+      "href": "https://www.linkedin.com/in/luisantuness",
+      "showText": true
+    },
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "href": "https://www.linkedin.com/in/luisantuness",
       "showText": true
     },
     {
       "id": "email",
       "label": "E-mail",
-      "href": "mailto:seuemail@example.com",
+      "href": "mailto:antunesluisbr@gmail.com",
       "showText": true
     }
   ],
   "technologies": [
     {
-      "id": "typescript",
-      "label": "typescript",
+      "id": "golang",
+      "label": "Golang",
+      "href": "https://golang.org/"
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "href": "https://www.java.com/"
+    },
+    {
+      "id": "python",
+      "label": "Python",
+      "href": "https://www.python.org/"
+    },
+    {
+      "id": "javascript",
+      "label": "Javascript",
       "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
-      "id": "node",
+      "id": "typescript",
+      "label": "Typescript",
+      "href": "https://www.typescriptlang.org/"
+    },
+    {
+      "id": "next",
       "label": "Next.js",
       "href": "https://nextjs.org/"
     },
+
+    {
+      "id": "react",
+      "label": "React",
+      "href": "https://reactjs.org/"
+    },
     {
       "id": "node",
-      "label": "Neovim",
-      "href": "https://neovim.io/"
+      "label": "Node",
+      "href": "https://reactjs.org/"
+    },
+
+    {
+      "id": "html",
+      "label": "HTML",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "id": "postgresql",
+      "label": "PostgreSQL",
+      "href": "https://www.postgresql.org/"
     }
   ]
 }
